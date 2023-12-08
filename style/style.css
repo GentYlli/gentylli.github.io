@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Open+Sans&display=swap');
+
+:root{
+  --base-color: #004aad;
+  --light-color: #6B98D6;
+  --dark-color: #052f62;
+  --details-color: rgb(0, 173, 0);
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Mooli', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.header{
+  background: rgba(124, 126, 255, 0.2);
+  backdrop-filter: blur(3px);
+  position: sticky;
+  top: 0;
+  padding: 0 5% 0 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: 200ms ease-in-out;
+  z-index: 99;
+}
+
+.header .logo{
+  width: 50%;
+}
+
+.header .logo img{
+  width: 55%;
+}
+
+.header .links{
+  width: 40%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.links a{
+  position: relative;
+  margin: 0 10px 0 10px;
+  color: var(--base-color);
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.links .border::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -2px;
+  left: -5px;
+  background: var(--base-color);
+  transition: 200ms ease-in;
+}
+
+.links .border:hover::after {
+  width: 110%;
+}
+
+.dropdown-btn {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown{
+  display: none;
+  position: absolute;
+  background-color: var(--base-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.dropdown a {
+  margin: 0;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-btn:hover .dropdown {
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: var(--light-color);
+}
+
+
+        /* The sidebar menu */
+        .sidebar {
+          height: 100%; /* 100% Full-height */
+          width: 0; /* 0 width - change this with JavaScript */
+          position: fixed; /* Stay in place */
+          z-index: 105; /* Stay on top */
+          top: 0;
+          right: 0;
+          background-color: var(--base-color);
+          padding-top: 60px; /* Place content 60px from the top */
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+        }
+        
+        /* The sidebar links */
+        .sidebar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #fff;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        /* When you mouse over the navigation links, change their color */
+        .sidebar a:hover {
+          background: var(--light-color);
+        }
+        
+        /* Position and style the close button (top right corner) */
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          font-size: 36px;
+        }
+        
+        /* The button used to open the sidebar */
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          color: white;
+          position: relative;
+          padding: 10px 15px;
+          border: none;
+          background: none;
+        }
+
+        #main {
+          display: none;
+        }
+        
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+          .sidebar {padding-top: 15px;}
+          .sidebar a {font-size: 18px;}
+        }
+        /*End of sidebar menu*/
+
+.intro-bg {
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/intro-bg.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  filter: brightness(90%);
+  z-index: 1;
+}
+
+.intro-bg .intro {
+  max-width: 90%;
+  height: 60%;
+  position: relative;
+  top: 20%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.intro .intro-title {
+  width: 50%;
+  color: var(--dark-color);
+  font-size: 35px;
+}
+
+.intro .intro-p {
+  width: 50%;
+  color: var(--base-color);
+  font-size: 20px;
+}
+
+.intro .intro-btn {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.intro-btn a {
+  background: var(--light-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+
+.intro-btn a:hover {
+  background: var(--base-color);
+}
+
+.partners {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 98;
+}
+
+.partners .separate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  transform: translate3d(0,-40px,0);
+}
+
+.partners .separate div {
+  background: #fff ;
+  display: flex;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  transform-style: preserve-3d;
+  width: 15%;
+  justify-content: center;
+}
+
+.separate div img{
+  width: 100%;
+  aspect-ratio: 4/2;
+  object-fit: contain;
+}
+
+ .pershkrim-bg {
+  position: relative;
+  background: #ddddff;
+  padding: 50px 0;
+ }
+
+.pershkrim-bg .pershkrim {
+  width: 90%;
+  position: relative;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.pershkrim .pershkrim-img {
+  width: 50%;
+}
+
+.pershkrim .pershkrim-txt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.pershkrim-txt .pershkrim-title1 {
+  padding-bottom: 30px;
+  color: var(--base-color);
+  font-size: 14px;
+}
+
+.pershkrim-txt .pershkrim-title2 {
+  padding-bottom: 20px;
+}
+
+.pershkrim-txt .pershkrim-p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section .swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper .swiper-slide {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.swiper .swiper-slide-active {
+  filter: blur(0px);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/about-image1.png")
+      no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/about-image1.png")
+      no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/about-image1.png")
+      no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/about-image1.png")
+      no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/about-image1.png")
+      no-repeat 50% 50% / cover;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+
+.keypoints {
+  position: relative;
+  min-height: 50vh;
+  padding: 50px;
+  background: #ddddff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.keypoints .keypoints-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.keypoints-row .box {
+  text-align: center;
+  min-height: 100px;
+}
+
+.frazime {
+  position: relative;
+  background: #ddddff;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.frazime .img-show {
+  min-width: 50%;
+  max-width: 70%;
+  padding: 40px ;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frazime .img-show img {
+  max-width: 100%;
+  aspect-ratio: 4/2;
+  border-radius: 10px;
+}
+
+.frazime .frazime-pershkrim {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 30px;
+}
+
+.shop {
+  position: relative;
+  padding-bottom: 30px;
+  box-shadow: inset 0px 0px 80px -20px rgba(0, 0, 0, 0.24);
+  z-index: 97;
+}
+
+.shop-title {
+  padding: 20px;
+  color: var(--dark-color);
+}
+
+.shop .row, .dyqani .row{
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  z-index: 1;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-snap-type: inline mandatory;
+}
+
+.shop .row > * {
+  scroll-snap-align: start;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.row .kategori-full {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 240px;
+  min-height: 200px;
+  padding: 5%;
+  margin: 0 40px;
+  color: var(--base-color);
+  font-size: 20px;
+  box-shadow:
+  0px 0px 2.2px rgba(0, 0, 0, 0.1),
+  0px 0px 5.3px rgba(0, 0, 0, 0.1),
+  0px 0px 10px rgba(0, 0, 0, 0.3),
+  0px 0px 17.9px rgba(0, 0, 0, 0.042),
+  0px 0px 33.4px rgba(0, 0, 0, 0.05),
+  0px 0px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 98;
+}
+
+.kategori-full .kategori {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kategori-full:hover {
+  background: var(--base-color);
+  color: #fff;
+}
+
+.row a {
+  text-decoration: none;
+}
+
+.toTop {
+  position: fixed;
+  display: none;
+  right: 60px;
+  bottom: 60px;
+  width: 50px;
+  height: 50px;
+  background: var(--dark-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #093f80;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    transform: scale(0);
+  }
+  100%{
+    display: block;
+    transform: scale(1)
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    display: block;
+    transform: scale(1);
+  }
+  100%{
+    display: none;
+    transform: scale(0)
+  }
+}
+
+.toTop:hover {
+  background: var(--base-color);
+}
+
+.footer {
+  position: static;
+  bottom: 0;
+  height: 250px;
+  background-image: url("../images/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer div {
+  margin-top: 15px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  height: 20px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.nav-bar a:hover {
+  background-color: var(--light-color);
+}
+
+.nav-bar .vl {
+  border-left: 1px solid #fff;
+  height: 100%;
+  margin: 0 4px;
+}
+
+.social i {
+  color: #fff;
+  font-size: 25px;
+}
+
+.social a {
+  margin: 0 5px;
+}
+
+p {
+  line-height: 1.5em;
+  word-spacing: 0.2em;
+}
+
+
+
+
+/* Kontakt */
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px 0 ;
+}
+
+.info .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 30%;
+  color: var(--dark-color);
+}
+
+.column i {
+  font-size: 50px;
+}
+
+.column .info-title {
+  font-size: 25px;
+}
+
+.column .info-text {
+  font-size: 20px;
+}
+
+.column p {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.column a {
+  text-decoration: underline;
+  color: var(--dark-color);
+  padding: 3px 3px;
+}
+
+.column a:hover {
+  background-color: var(--dark-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.column a i {
+  font-size: medium;
+  padding: 4px;
+}
+
+/*End of kontakt*/
+
+
+
+/*kategorite*/
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  padding: 40px;
+  margin: 20px 0;
+  font-size: 20px;
+  text-align: right;
+}
+.section .logos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ddddff;
+  width: 500px;
+  height: 420px;
+  clip-path: circle(40%);
+  float: right;
+  shape-outside: circle(45%);
+}
+
+.section .logos img {
+  width: 200px;
+  height: 200px;
+}
+
+#knauf-logo {
+  margin-top: 15%;
+  width: 300px;
+  height: 300px;
+}
+
+.section p {
+  line-height: 1.8em;
+  color: var(--dark-color);
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.bar div .lloji-btn{
+  position: relative;
+  background: var(--dark-color);
+  color: #fff;
+  border:none ;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.bar button:hover {
+  background: var(--light-color);
+}
+
+.bar button:focus::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 30%;
+  align-self: center;
+  width: 0; 
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 10px solid var(--details-color);
+}
+
+.bar button:focus::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--details-color);
+}
+
+.list {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in;
+}
+.list .produkt {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 40px 0 40px 40px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.list .produkt::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -300px;
+  height: 120%;
+  width: 600px;
+  background: #ddddff;
+  clip-path: ellipse(600px 300px at left 250px);
+}
+
+.produkt .img-container {
+  position: relative;
+}
+.produkt .img-container .img-box img {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 1/1;
+  filter: brightness(0.95);
+  filter: saturate(2.5);
+}
+
+.produkt .produkt-details {
+  position: relative;
+  min-width: 60%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--dark-color);
+}
+
+.produkt-details .produkt-name {
+  width: 100%;
+}
+
+.produkt-name h1 {
+  font-size: 24px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 4px solid var(--details-color);
+}
+
+.produkt-pershkrim p{
+  line-height: 1.5em;
+  padding: 0 20px;
+  size: 18px;
+}
+
+.produkt-pershkrim ul {
+  padding-left: 40px;
+}
+
+
+/*End of kategorite*/
+
+@media only screen and (max-width: 767px) {
+  #intro {height: 50%;}
+  #intro-title, #intro-p{width: 70%;}
+  #intro-btn {width: 70%;}
+  #partners #separate div {width: 22%;}
+  #separate div img{aspect-ratio: 4/3;}
+  #pershkrim, #info, #keypoints-row {flex-direction: column;align-items: center;}
+  #pershkrim-img, #pershkrim-txt {width: 80%;}
+  #column, #box {margin: 20px 0;}
+  #produkt-name h1 {font-size: 20px;}
+  #produkt-pershkrim p {font-size: 16px;}
+  #frazime{flex-direction: column;}
+  .frazime #frazime-pershkrim{text-align: center;}
+  .frazime #img-show{padding: 20px;}
+  .list #produkt {flex-direction: column;align-items: center;padding: 40px 0;}
+}
+
+@media only screen and (max-width: 872px) {
+  #links { display: none;}
+  #main {display: block;}
+}
+
+@media only screen and (max-width: 426px) {
+  #intro-title {font-size: 22px;}
+  #intro-p {font-size: 16px;}
+  #intro-btn a {padding: 6px 11px;font-size: 14px;}
+  #pllaka-btn,#aksesore-btn,#lesh-btn,#stuko-btn,#dinova-btn,#vivechrom-btn,#profile-btn,#polisterol-btn,#grafiato-btn,#lesh-kapot{padding: 7px 15px;font-size: 14px;}
+  .header #logo img {width: 100%;}
+  .swiper .swiper-wrapper #swiper-slide {width: 250px;height: 350px;}
+  .frazime #frazime-pershkrim{font-size: 16px;}
+  .frazime #img-show img{aspect-ratio: 3/3;}
+  .list .produkt::before {top: 50px;left: -250px;height: 120%;clip-path: ellipse(600px 150px at left 150px);}
+  #section {font-size: 16px; padding: 25px;text-align: center;}
+  #section .logos {flex-direction: row; width: 100%;height: 200px; clip-path: ellipse(150px 80px);shape-outside:none; justify-content: center;}
+  #section .logos img {width: 150px; height: 130px;margin-top: 0;}
+  #section p {line-height: 1.5em;}
+}
+
+@media only screen and (min-width:427px) and (max-width:767px) {
+  #intro-title {font-size: 25px;}
+  #intro-p {font-size: 18px;}
+  #intro-btn a {padding: 8px 13px;font-size: 15px;}
+  #pllaka-btn,#aksesore-btn,#lesh-btn,#stuko-btn,#dinova-btn,#vivechrom-btn,#profile-btn,#polisterol-btn,#grafiato-btn,#lesh-kapot{padding: 7px 15px;font-size: 14px;}
+  .header #logo img {width: 80%;}
+  .list #produkt::before {top: 50px;left: -120px;height: 120%;clip-path: ellipse(600px 150px at left 150px);}
+  #section {font-size: 16px; padding: 25px;text-align: left;}
+  #section .logos {flex-direction: row; width: 260px;height: 250px; clip-path: ellipse(130px 100px);shape-outside: ellipse(130px 110px); justify-content: center; float: inline-start;}
+  #section .logos img {width: 150px; height: 130px;margin-top: 0;}
+  #section p {line-height: 1.5em;}
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+  #pershkrim {flex-direction: column;align-items: center;}
+  #pershkrim-img, #pershkrim-txt {width: 70%;}
+}
