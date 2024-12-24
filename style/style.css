@@ -444,7 +444,7 @@ section .swiper {
   scroll-snap-align: start;
 }
 
-.row::-webkit-scrollbar {
+.row::-webkit-scrollbar, .bar::-webkit-scrollbar {
   display: none;
 }
 
@@ -453,10 +453,10 @@ section .swiper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 240px;
+  min-width: 250px;
   min-height: 200px;
   padding: 5%;
-  margin: 0 40px;
+  margin: 0 50px;
   color: var(--base-color);
   font-size: 20px;
   box-shadow:
@@ -684,14 +684,15 @@ p {
 }
 
 .bar {
+  overflow-y: hidden;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  justify-content: space-around;
   margin: 40px 0;
+  justify-content: space-around;
 }
 
-.bar div .lloji-btn{
+.bar>div .lloji-btn{
   position: relative;
   background: var(--dark-color);
   color: #fff;
@@ -703,19 +704,6 @@ p {
 
 .bar button:hover {
   background: var(--light-color);
-}
-
-.bar button:focus::after {
-  content: '';
-  position: absolute;
-  bottom: -9px;
-  left: 30%;
-  align-self: center;
-  width: 0; 
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 10px solid var(--details-color);
 }
 
 .bar button:focus::before {
@@ -834,11 +822,15 @@ p {
   .swiper .swiper-wrapper #swiper-slide {width: 250px;height: 350px;}
   .frazime #frazime-pershkrim{font-size: 16px;}
   .frazime #img-show img{aspect-ratio: 3/3;}
+  .row .kategori-full {margin: 0 20px;min-width: 220px;}
+  .bar .lloji-btn{margin: 0 4px;}
   .list .produkt::before {top: 50px;left: -250px;height: 120%;clip-path: ellipse(600px 150px at left 150px);}
   #section {font-size: 16px; padding: 25px;text-align: center;}
   #section .logos {flex-direction: row; width: 100%;height: 200px; clip-path: ellipse(150px 80px);shape-outside:none; justify-content: center;}
   #section .logos img {width: 150px; height: 130px;margin-top: 0;}
   #section p {line-height: 1.5em;}
+  #toTop {right: 40px;width: 40px;height: 40px;opacity: .7;}
+  #toTop:hover {opacity: 1;}
 }
 
 @media only screen and (min-width:427px) and (max-width:767px) {
