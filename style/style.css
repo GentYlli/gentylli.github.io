@@ -909,7 +909,8 @@ p {
 }
 
 .segments .paragraph .paragraph-col>b,
-.segments .paragraph .separate>b {
+.segments .paragraph .separate>b,
+.segments .paragraph>b {
   text-transform: uppercase;
   font-size: 2rem;
   color: #005bd1;
@@ -936,6 +937,75 @@ p {
 
 .segments .paragraph .paragraph-img .img {
   height: 100%;
+}
+
+.paragraph.center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 700px;
+  margin: 50px 0;
+}
+
+.paragraph .downloads {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 350px;
+  background: #f9f8f8;
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
+  transition: ease-in 0.1s;
+}
+
+.paragraph .downloads:hover {
+  box-shadow: 0 5px 10px #dfdfdf;
+  animation: ease-in 5s;
+}
+
+.paragraph .downloads .card-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.paragraph .downloads .download-img {
+  position: relative;
+  width: 100%;
+}
+
+.paragraph .downloads .download-img img {
+  width: 100%;
+}
+
+.paragraph .downloads .download-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  min-height: 250px;
+  width: 100%;
+  padding: 30px 15px 10px;
+}
+
+.paragraph .downloads .download-text .a-link {
+  text-decoration: none;
+  color: #052f62;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.paragraph .downloads .download-text .a-link .fa-solid {
+  color: #005bd1;
+}
+
+.paragraph .downloads .download-text .a-link:hover {
+  text-decoration: underline;
+}
+
+.paragraph .downloads .download-text .a-link:hover> .fa-solid {
+  color: #052f62;
 }
 
 /*End of kcs*/
