@@ -949,46 +949,46 @@ p {
   margin: 40px 0;
 }
 
-.paragraph .downloads {
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-width: 380px;
+  justify-content: space-evenly;
+  flex: 1;
+  min-width: 300px;
+  max-width: 370px;
   background: #f9f8f8;
-  margin: 20px 0;
+  margin: 20px 0 0 20px;
   border: 1px solid #e1e1e1;
   cursor: pointer;
   transition: ease-in 0.1s;
 }
 
-.paragraph .downloads:hover {
+.card:hover {
   box-shadow: 0 5px 10px #dfdfdf;
   animation: ease-in 5s;
 }
 
-.paragraph .downloads .card-link {
+.card-link {
   text-decoration: none;
   color: #000;
 }
 
-.paragraph .downloads .download-img {
+.card-img {
   position: relative;
   width: 100%;
 }
 
-.paragraph .downloads .download-img img {
+.card-img img {
   width: 100%;
 }
 
-.paragraph .downloads .download-text {
+.card-text {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-decoration: none;
   min-height: 250px;
-  width: 100%;
   padding: 30px 15px 10px;
 }
 
@@ -1012,6 +1012,55 @@ p {
 }
 
 /*End of kcs*/
+
+.hero-solutions {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-solutions img {
+  position: relative;
+  width: 100%;
+  height: 160%;
+  filter: brightness(70%);
+}
+
+.hero-solutions .hero-text-solutions {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+}
+
+.hero-solutions .hero-text-solutions h1 {
+  font-size: 3.5rem;
+}
+
+.hero-solutions .hero-text-solutions h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.card-solution {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.short {
+  min-height: 200px;
+}
+
+/*solutions*/
 
 @media only screen and (max-width: 767px) {
   #intro {height: 50%;}
