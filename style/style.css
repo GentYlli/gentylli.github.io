@@ -892,7 +892,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 300px;
+  height: fit-content;
   max-width: 800px;
 }
 
@@ -903,6 +903,7 @@ p {
   justify-content: center;
   width: 100%;
   padding: 40px 50px;
+  height: fit-content;
 }
 
 .segments .paragraph.reverse {
@@ -911,10 +912,13 @@ p {
 
 .segments .paragraph .paragraph-col>b,
 .segments .paragraph .separate>b,
-.segments .paragraph>b {
+.segments .paragraph>b,
+.segments .benefits-col b {
   text-transform: uppercase;
+  font-style: italic;
   font-size: 2rem;
   color: #005bd1;
+  max-width: 800px;
 }
 
 .segments .paragraph .paragraph-col>p,
@@ -922,12 +926,13 @@ p {
   line-height: 30px;
   word-spacing: 0.01rem;
   font-size: 0.9rem;
+  margin-top: 20px;
 }
 
 .segments .paragraph .separate {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 50%;
   padding: 0 20px;
 }
@@ -1060,7 +1065,60 @@ p {
   min-height: 200px;
 }
 
-/*solutions*/
+/*end of solutions*/
+
+/*benefits*/
+
+.benefits-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.benefits-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.benefits-row .benefits {
+  position: relative;
+  max-width: 350px;
+  min-width: 200px;
+  background: #f9f8f8;
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  margin: 30px 0 0 20px;
+}
+
+.benefits-row .benefits .benefits-img {
+  padding: 40px 20px;
+}
+
+.benefits-row .benefits .benefits-img img {
+  width: 64px;
+}
+
+.benefits-row .benefits .benefits-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 220px;
+  padding: 30px 15px 10px;
+}
+
+.benefits-row .benefits .benefits-text .head {
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/*end of benefits*/
 
 @media only screen and (max-width: 767px) {
   #intro {height: 50%;}
