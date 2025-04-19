@@ -1036,20 +1036,39 @@ p {
   filter: brightness(70%);
 }
 
-.hero-solutions .hero-text-solutions {
+.hero-short {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-short img {
+  position: relative;
+  width: 100%;
+  height: 150%;
+  filter: brightness(70%);
+}
+
+.hero-text-solutions {
   position: absolute;
   text-align: center;
   color: #fff;
-  max-width: 700px;
 }
 
-.hero-solutions .hero-text-solutions h1 {
+.hero-text-solutions h1 {
   font-size: 3.5rem;
+  text-transform: uppercase;
 }
 
-.hero-solutions .hero-text-solutions h3 {
+.hero-text-solutions h3 {
   font-size: 2rem;
   text-transform: uppercase;
+  max-width: 700px;
 }
 
 .card-solution {
@@ -1075,6 +1094,10 @@ p {
   flex-direction: column;
   width: 100%;
   align-items: center;
+}
+
+.benefits-col b {
+  text-align: center;
 }
 
 .benefits-row {
