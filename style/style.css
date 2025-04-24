@@ -949,16 +949,16 @@ p {
 .paragraph.center {
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
-  min-height: 600px;
-  margin: 40px 0;
+  min-height: fit-content;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  text-align: left;
   flex: 1;
   min-width: 300px;
   max-width: 370px;
@@ -992,9 +992,14 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   text-decoration: none;
   min-height: 250px;
   padding: 30px 15px 10px;
+}
+
+.card-text p {
+  padding: 10px 0;
 }
 
 .a-link {
@@ -1086,6 +1091,31 @@ p {
 
 /*end of solutions*/
 
+/*applications*/
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.application-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 1;
+  max-width: 31%;
+  min-width: 250px;
+  background: #f9f8f8;
+  margin: 20px 0 0 20px;
+  border: 1px solid #e1e1e1;
+}
+
+/*end of applications*/
+
 /*benefits*/
 
 .benefits-col {
@@ -1096,8 +1126,10 @@ p {
   align-items: center;
 }
 
-.benefits-col b {
+.benefits-col b, .benefits-col p {
+  max-width: 800px;
   text-align: center;
+  padding-top: 20px;
 }
 
 .benefits-row {
@@ -1129,7 +1161,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   min-height: 220px;
   padding: 30px 15px 10px;
