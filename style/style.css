@@ -1136,7 +1136,7 @@ p {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .benefits-row .benefits {
