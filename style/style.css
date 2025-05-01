@@ -1175,6 +1175,62 @@ p {
 
 /*end of benefits*/
 
+/*document-ceneter*/
+
+/* Basic styling (customize as needed) */
+
+.search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  position: relative;
+  margin: 20px;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.pdf-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 20px 20px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.pdf-icon {
+  margin-right: 12px;
+  color: #004aad; /* Red color for PDF icon */
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.pdf-icon:hover {
+  background: #f1f1f1;
+}
+
+.pdf-link {
+  color: #000;
+  text-decoration: none;
+}
+
+/*end of documnent-center*/
+
 @media only screen and (max-width: 767px) {
   #intro {height: 50%;}
   #intro-title, #intro-p{width: 70%;}
