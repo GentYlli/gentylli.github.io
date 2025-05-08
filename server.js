@@ -2,11 +2,11 @@
 const express = require('express');
 const fs      = require('fs');
 const path    = require('path');
-
 const cors = require('cors');
+const app       = express();
+
 app.use(cors());
 
-const app       = express();
 const PORT      = process.env.PORT || 3000;
 const ROOT      = __dirname;
 const FILES_DIR = path.join(ROOT, 'files');
