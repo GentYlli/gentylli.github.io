@@ -75,7 +75,7 @@
     
       async function fetchFiles() {
         try {
-          const res = await fetch('/api/files');
+          const res = await fetch('https://gentylli-github-io.onrender.com/api/files');
           files = await res.json();
           render(files);
         } catch (err) {
