@@ -1196,37 +1196,55 @@ p {
   font-size: 16px;
 }
 
-.pdf-list-container {
+.file-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
 }
 
-.pdf-item {
+.file-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
-  margin: 20px 20px;
-  border: 1px solid #eee;
-  border-radius: 6px;
+  border-bottom: 1px solid #eee;
+  padding: 15px 10px;
+  width: 90%;
 }
 
-.pdf-icon {
-  margin-right: 12px;
-  color: #004aad; /* Red color for PDF icon */
-  font-size: 20px;
-  border-radius: 50%;
-  padding: 15px;
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
 }
 
-.pdf-icon:hover {
-  background: #f1f1f1;
+.file-text {
+  display: flex;
+  flex-direction: column;
 }
 
-.pdf-link {
-  color: #000;
+.file-title {
+  margin-bottom: 4px;
+}
+
+.file-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+  color: #444;
+  white-space: nowrap;
+}
+
+.download-btn {
   text-decoration: none;
+  font-size: 1.5em;
+  color: #009fe3;
+}
+
+.download-btn:hover {
+  color: #007bb8;
 }
 
 /*end of documnent-center*/

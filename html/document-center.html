@@ -11,64 +11,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="../images/icon.png">
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        // PDF data (replace with your actual files)
-        const pdfs = [
-          { path: "/documents/DONN Perimeter Trims datasheet.pdf", displayName: "DONN Perimeter Trims datasheet" },
-          { path: "/documents/KCS_DoP_KCS_1.05.1_EN.pdf.pdf", displayName: "KCS_DoP_KCS_1.05.1_EN" },
-          { path: "/documents/", displayName: "" },
-        ];
-      
-        const searchBar = document.getElementById("searchBar");
-        const pdfList = document.getElementById("pdfList");
-
-      // Function to render PDFs
-        function renderPDFs(filteredPDFs = pdfs) {
-          pdfList.innerHTML = ""; // Clear existing list
-        
-          filteredPDFs.forEach(pdf => {
-            // Create PDF item container
-            const pdfItem = document.createElement("div");
-            pdfItem.className = "pdf-item";
-          
-            // Add download link
-            const pdfLink = document.createElement("a");
-            pdfLink.href = pdf.path;
-            pdfLink.textContent = pdf.displayName;
-            pdfLink.className = "pdf-link";
-            pdfLink.target = "_blank";
-            pdfItem.appendChild(pdfLink);
-          
-            const pdfDownload = document.createElement("a");
-            pdfDownload.href = "";
-            pdfDownload.download = pdf.path;
-            pdfItem.appendChild(pdfDownload);
-          
-            // Add PDF icon (using Font Awesome or similar)
-            const pdfIcon = document.createElement("i");
-            pdfIcon.className = "fa-solid fa-download pdf-icon";
-            pdfDownload.appendChild(pdfIcon);
-          
-            // Add to list
-            pdfList.appendChild(pdfItem);
-          });
-        }
-
-      
-        // Initial render
-        renderPDFs();
-      
-        // Search functionality
-        searchBar.addEventListener("input", function(e) {
-          const searchTerm = e.target.value.toLowerCase();
-          const filteredPDFs = pdfs.filter(pdf => 
-            pdf.displayName.toLowerCase().includes(searchTerm)
-          );
-          renderPDFs(filteredPDFs);
-        });
-      });
-    </script>
 </head>
 <body>
 
@@ -108,10 +50,10 @@
     </div>
 
     <div class="search">
-        <input type="text" id="searchBar" placeholder="Search PDFs..." class="search-input">
+        <input type="text" id="searchInput" placeholder="Search PDFs..." class="search-input">
     </div>
 
-    <div id="pdfList"></div>
+    <div class="file-list" id="fileList">Loading</div>
 
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
@@ -128,6 +70,59 @@
             <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
         </div>
     </div>
+    <script>
+      let files = [];
+    
+      async function fetchFiles() {
+        try {
+          const res = await fetch('/api/files');
+          files = await res.json();
+          render(files);
+        } catch (err) {
+          document.getElementById('fileList').innerHTML = '<p>Error loading files.</p>';
+          console.error(err);
+        }
+      }
+      function render(list) {
+  const out = document.getElementById('fileList');
+  if (!out) return console.error("Missing #fileList element.");
+
+  if (!list.length) {
+    out.innerHTML = '<p>No documents found.</p>';
+    return;
+  }
+
+  out.innerHTML = '';
+  list.forEach(f => {
+    const div = document.createElement('div');
+    div.className = 'file-item';
+
+    div.innerHTML = `
+      <div class="file-info">
+        <div class="file-text">
+          <div class="file-title">${f.name}</div>
+        </div>
+      </div>
+      <div class="file-meta">
+        <span>PDF</span>
+        <span>${f.size}</span>
+        <a href="${f.url}" class="download-btn" download title="Download"><i class="fa-solid fa-download"></i></a>
+      </div>
+    `;
+    out.appendChild(div);
+  });
+}
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('searchInput')?.addEventListener('input', e => {
+          const q = e.target.value.toLowerCase();
+          render(files.filter(f => f.name.toLowerCase().includes(q)));
+        });
+    
+        fetchFiles();
+      });
+    </script>
+    
     <script src="../js/js.js"></script>
 </body>
 
