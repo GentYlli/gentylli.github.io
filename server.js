@@ -43,6 +43,29 @@ app.get('/download/:filename', (req, res) => {
   });
 });
 
+// 4) View route — opens in browser
+app.get('/view/:filename', (req, res) => {
+  const filename = decodeURIComponent(req.params.filename);
+  const filePath = path.join(FILES_DIR, filename);
+
+  // Check if file exists
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send('File not found');
+  }
+
+  // Set Content-Disposition to view in-browser
+  res.setHeader('Content-Type', 'application/pdf'); // Optional: could be dynamic
+  res.setHeader('Content-Disposition', 'inline; filename="' + filename + '"');
+
+  res.sendFile(filePath, err => {
+    if (err) {
+      console.error('SendFile error:', err);
+      res.status(500).send('Error serving file');
+    }
+  });
+});
+
+
 app.get('/debug/files', (req, res) => {
   fs.readdir(FILES_DIR, (err, files) => {
     if (err) return res.status(500).json({ error: 'Cannot read files folder' });

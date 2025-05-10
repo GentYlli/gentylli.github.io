@@ -83,7 +83,9 @@
           console.error(err);
         }
       }
-      function render(list) {
+      const BACKEND_URL = 'https://gentylli-github-io.onrender.com';
+
+function render(list) {
   const out = document.getElementById('fileList');
   if (!out) return console.error("Missing #fileList element.");
 
@@ -100,18 +102,20 @@
     div.innerHTML = `
       <div class="file-info">
         <div class="file-text">
-          <div class="file-title">${f.name}</div>
+          <div class="file-title"><a class="file-link" target="_blank" href="/view/${encodeURIComponent(f.name)}">${f.name}</a>
+</div>
         </div>
       </div>
       <div class="file-meta">
         <span>PDF</span>
         <span>${f.size}</span>
-        <a href="${f.url}" class="download-btn" download title="Download"><i class="fa-solid fa-download"></i></a>
+        <a href="${BACKEND_URL}${f.url}" class="download-btn" download title="Download"><i class="fa-solid fa-download"></i></a>
       </div>
     `;
     out.appendChild(div);
   });
 }
+
     
       document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('searchInput')?.addEventListener('input', e => {

@@ -1229,6 +1229,11 @@ p {
   margin-bottom: 4px;
 }
 
+.file-link {
+  text-decoration: none;
+  color: #000;
+}
+
 .file-meta {
   display: flex;
   gap: 20px;
