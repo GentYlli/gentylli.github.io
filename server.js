@@ -43,6 +43,14 @@ app.get('/download/:filename', (req, res) => {
   });
 });
 
+app.get('/debug/files', (req, res) => {
+  fs.readdir(FILES_DIR, (err, files) => {
+    if (err) return res.status(500).json({ error: 'Cannot read files folder' });
+    res.json(files);
+  });
+});
+
+
 app.listen(PORT, () => {
   console.log(`⮀ Server listening on http://localhost:${PORT}`);
 });
