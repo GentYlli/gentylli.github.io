@@ -102,14 +102,17 @@ function render(list) {
     div.innerHTML = `
       <div class="file-info">
         <div class="file-text">
-          <div class="file-title"><a class="file-link" target="_blank" href="/view/${encodeURIComponent(f.name)}">${f.name}</a>
-</div>
+          <div class="file-title">
+            <a class="file-link" target="_blank" href="/files/${encodeURIComponent(f.name)}">${f.name}</a>
+          </div>
         </div>
       </div>
       <div class="file-meta">
         <span>PDF</span>
         <span>${f.size}</span>
-        <a href="${BACKEND_URL}${f.url}" class="download-btn" download title="Download"><i class="fa-solid fa-download"></i></a>
+        <a href="/files/${encodeURIComponent(f.name)}" class="download-btn" title="Download" download>
+          <i class="fa-solid fa-download"></i>
+        </a>
       </div>
     `;
     out.appendChild(div);

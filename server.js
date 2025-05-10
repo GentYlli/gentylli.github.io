@@ -26,53 +26,12 @@ app.get('/api/files', (req, res) => {
       const stats = fs.statSync(path.join(FILES_DIR, fn));
       return {
         name: fn,
-        size: (stats.size / 1024 / 1024).toFixed(2) + ' MB',
-        url: `/download/${encodeURIComponent(fn)}`
+        size: (stats.size / 1024 / 1024).toFixed(2) + ' MB'
       };
     });
     res.json(list);
   });
 });
-
-// 3) Download route
-app.get('/download/:filename', (req, res) => {
-  const filename = req.params.filename;
-  const p = path.join(FILES_DIR, filename);
-  res.download(p, filename, err => {
-    if (err) res.status(404).send('File not found');
-  });
-});
-
-// 4) View route — opens in browser
-app.get('/view/:filename', (req, res) => {
-  const filename = decodeURIComponent(req.params.filename);
-  const filePath = path.join(FILES_DIR, filename);
-
-  // Check if file exists
-  if (!fs.existsSync(filePath)) {
-    return res.status(404).send('File not found');
-  }
-
-  // Set Content-Disposition to view in-browser
-  res.setHeader('Content-Type', 'application/pdf'); // Optional: could be dynamic
-  res.setHeader('Content-Disposition', 'inline; filename="' + filename + '"');
-
-  res.sendFile(filePath, err => {
-    if (err) {
-      console.error('SendFile error:', err);
-      res.status(500).send('Error serving file');
-    }
-  });
-});
-
-
-app.get('/debug/files', (req, res) => {
-  fs.readdir(FILES_DIR, (err, files) => {
-    if (err) return res.status(500).json({ error: 'Cannot read files folder' });
-    res.json(files);
-  });
-});
-
 
 app.listen(PORT, () => {
   console.log(`⮀ Server listening on http://localhost:${PORT}`);
