@@ -54,19 +54,8 @@
   font-size: 19px;
 }
 
-.links .border::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: -2px;
-  left: -5px;
-  background: var(--base-color);
-  transition: 200ms ease-in;
-}
-
-.links .border:hover::after {
-  width: 110%;
+.links .produkte {
+  cursor: pointer;
 }
 
 .dropdown-btn {
