@@ -787,22 +787,26 @@ p {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  height: 80vh;
+  min-height: 75vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero-left {
-  width: 70%;
+  position: relative;
+  left: -20%;
+  width: 90%;
+  height: 75vh;
   z-index: 2;
   object-fit: contain;
 }
 
 .hero-right {
   position: absolute;
-  width: 45%;
+  width: 55%;
   z-index: 1;
   height: 70%;
-  right: 0;
+  right: -5%;
   object-fit: cover;
 }
 
@@ -819,9 +823,9 @@ p {
 .hero-text {
   position: relative;
   top: -100%;
-  width: 75%;
-  left: 5%;
-  height: 100%;
+  width: 65%;
+  left: 25%;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -855,6 +859,7 @@ p {
   padding: 14px 30px;
   font-size: 1rem;
   font-weight: bold;
+  text-align: center;
   border-radius: 2px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -952,10 +957,13 @@ p {
   min-width: 300px;
   max-width: 370px;
   background: #f9f8f8;
-  margin: 20px 0 0 20px;
   border: 1px solid #e1e1e1;
   cursor: pointer;
   transition: ease-in 0.1s;
+}
+
+.card.margin {
+    margin: 20px 0 0 20px;
 }
 
 .card:hover {
@@ -1012,11 +1020,13 @@ p {
 
 /*End of kcs*/
 
+/*solutions*/
+
 .hero-solutions {
   position: relative;
   margin-top: 20px;
   width: 100%;
-  height: 350px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1024,7 +1034,7 @@ p {
 }
 
 .hero-solutions img {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 160%;
   filter: brightness(70%);
@@ -1054,15 +1064,34 @@ p {
   color: #fff;
 }
 
+.hero-text-solutions.space {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .hero-text-solutions h1 {
   font-size: 3.5rem;
   text-transform: uppercase;
+}
+
+.hero-text-solutions h2 {
+  font-size: 2.5rem;
+  max-width: 700px;
 }
 
 .hero-text-solutions h3 {
   font-size: 2rem;
   text-transform: uppercase;
   max-width: 700px;
+}
+
+.hero-text-solutions h4 {
+  font-size: 1.2rem;
+  max-width: 700px;
+  line-height: 2rem;
 }
 
 .card-solution {
@@ -1076,6 +1105,15 @@ p {
 
 .short {
   min-height: 200px;
+}
+
+.kcs-produkte {
+  background: #fff;
+  color: #000;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /*end of solutions*/
@@ -1301,4 +1339,47 @@ p {
 @media only screen and (min-width:768px) and (max-width:1023px){
   #pershkrim {flex-direction: column;align-items: center;}
   #pershkrim-img, #pershkrim-txt {width: 70%;}
+}
+
+@media only screen and (max-width:600px) {
+.hero {height:60vh;}
+div.hero-right {display: none;}
+div.hero-left {width: 130%;height: 60vh;}
+img.interior-image {width:200%;height:180%;top: -80%;left:-50%;position: relative;}
+div.hero-text {width: 90%;height: 60vh;left: 25%;top: -180%;}
+div.hero-text h1 {font-size: 1.8rem;}
+.btn {width: 100%;}
+.segments .paragraph {padding: 25px 20px;flex-direction: column;}
+.segments .paragraph .paragraph-col>b,
+.segments .paragraph .separate>b,
+.segments .paragraph>b,
+.segments .benefits-col b {font-size: 1.5rem;}
+.segments .paragraph .paragraph-col>p,
+.segments .paragraph .separate>p {font-size: 0.8rem;}
+.segments .paragraph .paragraph-img {width: 100%;padding: 0;}
+.segments .paragraph .separate {width: 100%;padding: 0;}
+.segments .paragraph.reverse {flex-direction: column;}
+.hero-solutions img {width: 200%;height: 100%;}
+.hero-text-solutions.space {height:100%;padding: 20px;}
+.hero-text-solutions h1 {font-size: 2rem;}
+.hero-text-solutions h2 {font-size: 1.2rem;}
+.hero-text-solutions h3 {font-size: 1.2rem;}
+.hero-text-solutions h4 {font-size: 0.8rem;}
+.kcs-produkte {width:100%;font-size: 1rem;}
+.card-solution {padding: 20px;}
+.card.margin {margin: 20px 0 0 0;}
+.benefits-row {flex-direction: column;align-items: center;}
+.benefits-row .benefits {margin: 30px 0;}
+.paragraph-col.center {text-align: center;}
+.card-row {flex-direction: column;align-items: center;}
+.application-card {margin: 20px 0;min-width: 80%;}
+}
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .hero {height:40vh;}
+  div.hero-right {display: none;}
+  div.hero-left {width: 130%;height: 40vh;}
+  img.interior-image {width:200%;height:180%;top: -80%;left:-50%;position: relative;}
+  div.hero-text {width: 90%;height: 40vh;left: 25%;top: -180%;}
+  div.hero-text h1 {font-size: 2.5rem;}
+
 }
