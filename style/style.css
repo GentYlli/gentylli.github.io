@@ -39,6 +39,62 @@
   width: 55%;
 }
 
+/* Product Search Bar */
+.search-container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  font-size: 16px;
+  border: 2px solid var(--light-color);
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Mooli', sans-serif;
+}
+
+.search-input:focus {
+  border-color: var(--base-color);
+  box-shadow: 0 0 10px rgba(0, 74, 173, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--base-color);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: var(--dark-color);
+  font-size: 18px;
+}
+
+/* Highlight matched text */
+.produkt.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    font-size: 14px;
+    padding: 12px 45px 12px 15px;
+  }
+}
+
+/* End of Product Search Bar */
+
 .header .links{
   width: 40%;
   height: 20px;
@@ -63,14 +119,22 @@
   position: relative;
 }
 
+/* Dropdown uses opacity/visibility transitions so it doesn't close while the cursor moves between
+   the toggle and the menu. This also enables keyboard focus via :focus-within. */
 .dropdown{
-  display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--base-color);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 9999; /* keep dropdown above header */
   border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+  pointer-events: none;
 }
 
 .dropdown a {
@@ -81,8 +145,14 @@
   display: block;
 }
 
-.dropdown-btn:hover .dropdown {
-  display: block;
+.dropdown-btn:hover .dropdown,
+.dropdown-btn:focus-within .dropdown,
+.dropdown:hover,
+.dropdown-btn.open .dropdown {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .dropdown a:hover {
@@ -520,14 +590,14 @@ section .swiper {
 .footer {
   position: static;
   bottom: 0;
-  height: 250px;
-  background-image: url("../images/wave.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 400px;
+  background: linear-gradient(180deg, var(--light-color) 0%, var(--base-color) 50%, var(--dark-color) 100%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding: 0 0 20px 0;
+  margin-top: 50px;
 }
 
 .footer div {
@@ -569,6 +639,61 @@ section .swiper {
 p {
   line-height: 1.5em;
   word-spacing: 0.2em;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 80px 40px 20px 40px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 200px;
+    text-align: left;
+}
+
+.footer-column h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-column p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+.footer-column i {
+    margin-right: 8px;
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.footer h5 { 
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        align-content: center;
+    }
+    
+    .footer-column {
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -627,6 +752,67 @@ p {
 
 /*End of kontakt*/
 
+
+/* Image Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Make product images clickable */
+.produkt .img-box img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.produkt .img-box img:hover {
+  transform: scale(1.05);
+}
 
 
 /*kategorite*/
@@ -736,6 +922,33 @@ p {
   overflow: hidden;
 }
 
+/* Ensure hidden products stay hidden even when .list .produkt sets display */
+.list .produkt.hidden {
+  display: none;
+}
+
+/* Highlight matched search terms */
+.highlight {
+  background: linear-gradient(90deg, rgba(255,230,128,0.9), rgba(255,214,102,0.95));
+  color: #08223a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+}
+
+/* Matched product styling */
+.produkt.match {
+  border-left: 6px solid var(--details-color);
+  box-shadow: 0 8px 24px rgba(2, 74, 173, 0.06);
+  transform: translateY(-2px);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.produkt.match .produkt-details h1,
+.produkt.match .produkt-details strong {
+  color: var(--base-color);
+}
+
 .list .produkt::before {
   content: '';
   position: absolute;
@@ -787,6 +1000,48 @@ p {
 
 .produkt-pershkrim ul {
   padding-left: 40px;
+}
+
+/* Product Contact Button Styles */
+.produkt-contact {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+}
+
+.contact-btn i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 15px;
+  }
 }
 
 
@@ -1213,9 +1468,9 @@ p {
 
 /*end of benefits*/
 
-/*document-ceneter*/
+/*document-center*/
 
-/* Basic styling (customize as needed) */
+/* Basic styling  */
 
 .search {
   position: relative;
@@ -1292,6 +1547,47 @@ p {
 
 /*end of documnent-center*/
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 130px;
+  right: 55px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+.whatsapp-float i {
+  margin: 0;
+}
+
+/* Mobile adjustment */
+@media (max-width: 426px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 120px;
+    right: 35px;
+    font-size: 26px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   #intro-title, #intro-p{width: 70%;}
   #intro-btn {width: 70%;}
@@ -1305,7 +1601,7 @@ p {
   #frazime{flex-direction: column;}
   .frazime #frazime-pershkrim{text-align: center;}
   .frazime #img-show{padding: 20px;}
-  .list #produkt {flex-direction: column;align-items: center;padding: 40px 0;}
+  .list .produkt {flex-direction: column;align-items: center;padding: 40px 0;}
 }
 
 @media only screen and (max-width: 920px) {

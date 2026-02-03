@@ -64,6 +64,12 @@
         </div>
     </div>
 
+                    <!-- Product Search Bar -->
+            <div class="search-container">
+                <input type="text" id="product-search" class="search-input" placeholder="Kërko produkte...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
     <div class="list" id="polisterol" style="display: flex;">
 
     </div>
@@ -79,18 +85,44 @@
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
 
-    <div class="footer">
-        <div class="nav-bar">
-            <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html">Kontakto</a>
+<div class="footer">
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
+            </div>
+            <div class="footer-column">
+                <h4>Orari i Punës</h4>
+                <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p>E Diel: Mbyllur</p>
+            </div>
         </div>
+        
+        <div class="nav-bar">
+            <a href="./index.html">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html">Kontakto</a>
+        </div>
+        
         <div class="social">
             <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
+        
         <div>
-            <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
+            <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
+
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/355695731993?text=Përshëndetje!%20Dua%20të%20pyes%20për%20produktet%20tuaja." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 
 <script>
@@ -107,19 +139,28 @@
     showDiv("grafiato");
    });
 
-   function showDiv(divId) {
-    var divs = ["polisterol", "lesh-kapot", "grafiato"];
-   
-   // Hide all divs
-   divs.forEach(function(id) {
-      document.getElementById(id).style.overflow = null;
-      document.getElementById(id).style.maxHeight = null;
-   });
+        function showDiv(divId) {
+        var divs = ["polisterol", "lesh-kapot", "grafiato"];
+        // close others
+        divs.forEach(function(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (id === divId) return;
+            el.style.overflow = 'hidden';
+            el.style.maxHeight = '0px';
+            el.classList.remove('open');
+        });
+        const el = document.getElementById(divId);
+        if (el) {
+            el.style.overflow = 'hidden';
+            void el.offsetHeight;
+            el.style.maxHeight = el.scrollHeight + 'px';
+            el.classList.add('open');
+            const onEnd = function() { if (el.style.maxHeight !== '0px') el.style.overflow = 'visible'; el.removeEventListener('transitionend', onEnd); };
+            el.addEventListener('transitionend', onEnd);
+        }
+    }
   
-   // Show the specified div
-   document.getElementById(divId).style.overflow = document.getElementById(divId).style.overflow + "visible";
-   document.getElementById(divId).style.maxHeight = document.getElementById(divId).scrollHeight + "px";
-  }
   
 
 
@@ -127,4 +168,5 @@ AOS.init();
 
 </script>
 <script src="../js/js.js"></script>
+<script src="../js/search.js"></script>
 </html>
