@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#004aaf" />
+    <meta name="theme-color" content="#004aad" />
     
     <!-- SEO Meta Tags -->
     <title>Luli Gips - Gips, Bojëra dhe Materiale Ndërtimi | Shqipëri</title>
     <meta name="description" content="Luli Gips ofron gips cilësor, bojëra, tavane të varura KCS, kapot dhe produkte PFT. Brendet më të mira: Knauf, Vivechrom, Dinova, AMF. Shërbim profesional në Shqipëri.">
-    <meta name="keywords" content="gips, bojëra, knauf, vivechrom, tavane varura, KCS, materiale ndërtimi, Shqipëri, kapot, PFT">
+    <meta name="keywords" content="gips, bojëra, knauf, vivechrom, tavane te varura, KCS, materiale ndërtimi, Shqipëri, kapot, PFT">
     <meta name="author" content="Luli Gips">
     
     <!-- Open Graph for Social Media -->
@@ -60,6 +60,13 @@
         </div>
         
     </div>
+
+    <!-- Breadcrumb navigation -->
+    <nav aria-label="breadcrumb" class="breadcrumb" id="breadcrumb-nav">
+        <ol id="breadcrumb-list" class="breadcrumb-list">
+            <!-- Breadcrumb items will be injected here by a small script -->
+        </ol>
+    </nav>
 
     <div class="intro-bg">
         <div class="intro" id="intro" data-aos="fade-right" data-aos-offset="250" data-aos-duration="700">
@@ -175,64 +182,132 @@
     </div>
 -->
     <div class="shop">
-        <div class="shop-title">
-            <h2>Produkte</h2>
-        </div>
-        <div class="row">
-            <div class="gips">
-                <a href="./html/gips.html">
-                    <div class="kategori-full">
+        <button class="shop-nav shop-prev" aria-label="Shko mbrapa" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="shop-nav shop-next" aria-label="Shko përpara" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="row" tabindex="0" role="list">
+            <div class="gips" role="listitem">
+                <a href="./html/gips.html" aria-label="Shiko Gips">
+                    <div class="kategori-full" data-aos="fade-up" data-aos-delay="0">
                         <div class="kategori">
-                            <div class="kategori-img"><img src="./images/about-image1.png" alt=""></div>
+                            <div class="kategori-img"><img src="./images/pllaka/GKB.png" alt="Gips - Boards"></div>
                             <div class="kategori-emri">Gips</div>
+                            <div class="kategori-sub">Pllaka &amp; Profile</div>
+
+                            <div class="kategori-preview" aria-hidden="true">
+                                <div class="preview-inner">
+                                    <div class="preview-img"><img src="./images/pllaka/GKB.png" alt="Gips sample"></div>
+                                    <div class="preview-text">
+                                        <div class="preview-title">Zgjidhje për ndërtim të brendshëm</div>
+                                        <div class="preview-desc">Pllaka gipsi dhe profile të qëndrueshme për mure dhe tavane.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/gips.html">Shiko më shumë</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </a>
             </div>
             
-            <div class="Bojera">
-                <a href="./html/bojera.html">
-                    <div class="kategori-full">
+            <div class="Bojera" role="listitem">
+                <a href="./html/bojera.html" aria-label="Shiko Bojera">
+                    <div class="kategori-full" data-aos="fade-up" data-aos-delay="60">
                         <div class="kategori">
-                            <div class="kategori-img"><img src="./images/about-image1.png" alt=""></div>
+                            <div class="kategori-img"><img src="./images/vivechrom/vivechrom-vive-emulsion.png" alt="Bojera - Vivechrom"></div>
                             <div class="kategori-emri">Bojera</div>
+                            <div class="kategori-sub">Boje &amp; Mbarime</div>
+
+                            <div class="kategori-preview" aria-hidden="true">
+                                <div class="preview-inner">
+                                    <div class="preview-img"><img src="./images/vivechrom/vivechrom-vive-emulsion.png" alt="Bojera sample"></div>
+                                    <div class="preview-text">
+                                        <div class="preview-title">Veshje dhe mbrojtje</div>
+                                        <div class="preview-desc">Boje profesionale me ngjyra të qëndrueshme dhe mbarime elegante.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/bojera.html">Shiko më shumë</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> 
 
-            <div class="kcs">
-                <a href="./html/kcs.html">
-                    <div class="kategori-full">
+            <div class="kcs" role="listitem">
+                <a href="./html/kcs.html" aria-label="Shiko KCS">
+                    <div class="kategori-full" data-aos="fade-up" data-aos-delay="120">
                         <div class="kategori">
-                            <div class="kategori-img"><img src="./images/about-image1.png" alt=""></div>
+                            <div class="kategori-img"><img src="./images/kcs/RS_ADAGIO_Alpha_Plus_CF_heroteaserbg_M.webp" alt="KCS - Project"></div>
                             <div class="kategori-emri">KCS</div>
+                            <div class="kategori-sub">Tavane të Varura</div>
+
+                            <div class="kategori-preview" aria-hidden="true">
+                                <div class="preview-inner">
+                                    <div class="preview-img"><img src="./images/kcs/RS_ADAGIO_Alpha_Plus_CF_heroteaserbg_M.webp" alt="KCS sample"></div>
+                                    <div class="preview-text">
+                                        <div class="preview-title">Sisteme tavani modulare</div>
+                                        <div class="preview-desc">Tavane të lehta dhe estetike për ambiente komerciale dhe shërbime.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kcs.html">Shiko më shumë</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </a>
             </div>
             
-            <div class="kapot">
-                <a href="./html/kapot.html">
-                    <div class="kategori-full">
+            <div class="kapot" role="listitem">
+                <a href="./html/kapot.html" aria-label="Shiko Kapot">
+                    <div class="kategori-full" data-aos="fade-up" data-aos-delay="180">
                         <div class="kategori">
-                            <div class="kategori-img"><img src="./images/about-image1.png" alt=""></div>
+                            <div class="kategori-img"><img src="./images/stuko/knauf-biofinish.png" alt="Kapot - Finish"></div>
                             <div class="kategori-emri">Kapot</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                            <div class="kategori-sub">Shtukaturë &amp; Mbarime</div>
 
-            <div class="pft">
-                <a href="./html/pft.html">
-                    <div class="kategori-full">
-                        <div class="kategori">
-                            <div class="kategori-img"><img src="./images/about-image1.png" alt=""></div>
-                            <div class="kategori-emri">PFT</div>
+                            <div class="kategori-preview" aria-hidden="true">
+                                <div class="preview-inner">
+                                    <div class="preview-img"><img src="./images/stuko/knauf-biofinish.png" alt="Kapot sample"></div>
+                                    <div class="preview-text">
+                                        <div class="preview-title">Mbarime dekorative</div>
+                                        <div class="preview-desc">Shtukatura dhe mbarime për sipërfaqe të brendshme dhe fasada.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kapot.html">Shiko më shumë</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> 
+
+            <div class="pft" role="listitem">
+                <a href="./html/pft.html" aria-label="Shiko PFT">
+                    <div class="kategori-full" data-aos="fade-up" data-aos-delay="240">
+                        <div class="kategori">
+                            <div class="kategori-img"><img src="./images/pft.png" alt="PFT"></div>
+                            <div class="kategori-emri">PFT</div>
+                            <div class="kategori-sub">Shtukatura &amp; Sisteme</div>
+
+                            <div class="kategori-preview" aria-hidden="true">
+                                <div class="preview-inner">
+                                    <div class="preview-img"><img src="./images/pft.png" alt="PFT sample"></div>
+                                    <div class="preview-text">
+                                        <div class="preview-title">Sisteme komplekse</div>
+                                        <div class="preview-desc">Shtukatura dhe sisteme për izolim dhe estetikë profesionale.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/pft.html">Shiko më shumë</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </div> 
             
 
         </div>
@@ -280,8 +355,67 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
 <script src="./js/js.js"></script>
+<script src="/js/breadcrumbs.js"></script>
+<script src="/js/shop-carousel.js"></script>
 <script>
     AOS.init();
+
+    // Breadcrumb generator - builds breadcrumb from meta[name="breadcrumb"] or URL and tries to map breadcrumb labels to existing page links
+    (function() {
+      function generateBreadcrumbs() {
+        var nav = document.getElementById('breadcrumb-nav');
+        if (!nav) return;
+        var list = document.getElementById('breadcrumb-list');
+        var meta = document.querySelector('meta[name="breadcrumb"]');
+        var segments = [];
+        if (meta && meta.content.trim()) {
+          segments = meta.content.split('>').map(function(s){ return s.trim(); }).filter(function(s){ return s; });
+        } else {
+          var path = location.pathname.replace(/\/$/, '');
+          if (path === '' || path === '/index.html') {
+            segments = ['Kryefaqja'];
+          } else {
+            var parts = path.split('/').filter(Boolean);
+            var last = parts[parts.length - 1];
+            var name = last.replace('.html','').replace(/[-_]/g,' ');
+            name = decodeURIComponent(name);
+            name = name.charAt(0).toUpperCase() + name.slice(1);
+            segments = ['Kryefaqja', name];
+          }
+        }
+        function findHrefByText(text) {
+          var anchors = Array.prototype.slice.call(document.querySelectorAll('a'));
+          var lower = text.toLowerCase();
+          for (var i = 0; i < anchors.length; i++) {
+            var a = anchors[i];
+            if (a.textContent.trim().toLowerCase() === lower) return a.getAttribute('href');
+          }
+          return null;
+        }
+        list.innerHTML = '';
+        segments.forEach(function(seg, idx) {
+          var li = document.createElement('li');
+          li.className = 'breadcrumb-item';
+          if (idx < segments.length - 1) {
+            var href = findHrefByText(seg) || (seg.toLowerCase() === 'kryefaqja' ? './index.html' : '#');
+            var a = document.createElement('a');
+            a.setAttribute('href', href);
+            a.textContent = seg;
+            li.appendChild(a);
+          } else {
+            li.textContent = seg;
+            li.setAttribute('aria-current', 'page');
+            li.classList.add('current');
+          }
+          list.appendChild(li);
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+      } else {
+        generateBreadcrumbs();
+      }
+    })();
 
 
 

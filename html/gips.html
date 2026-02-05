@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#004aaf" />
+    <meta name="theme-color" content="#004aad" />
     
     <!-- SEO Meta Tags -->
     <title>Gips Knauf - Pllaka, Profile, Stuko, Lesh | Luli Gips</title>
@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="../images/icon.png">
+    <meta name="breadcrumb" content="Kryefaqja > Gips">
 </head>
 <body>
 
@@ -58,6 +59,11 @@
         </div>
         
     </div>
+
+    <!-- Breadcrumb navigation -->
+    <nav aria-label="breadcrumb" class="breadcrumb" id="breadcrumb-nav">
+        <ol id="breadcrumb-list" class="breadcrumb-list"></ol>
+    </nav>
 
 
     <div class="section" id="section">
@@ -191,7 +197,10 @@
       
 
       AOS.init();
-
+</script>
+    <script src="/js/breadcrumbs.js"></script>
+    <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
+    <script>
       // Image Lightbox Functions
       function openLightbox(imageSrc) {
         const lightbox = document.getElementById('lightbox');
