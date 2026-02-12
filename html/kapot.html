@@ -42,6 +42,14 @@
                     </div>
             </div>
             <a href="../html/kontakto.html" class="border">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -95,23 +103,23 @@
         <div class="footer-info">
             <div class="footer-column">
                 <h4>Luli Gips</h4>
-                <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
             </div>
             <div class="footer-column">
-                <h4>Kontakt</h4>
+                <h4 data-translate="contact">Kontakt</h4>
                 <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
                 <p><i class="fas fa-envelope"></i> info@luligips.al</p>
                 <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
             </div>
             <div class="footer-column">
-                <h4>Orari i Punës</h4>
-                <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-                <p>E Diel: Mbyllur</p>
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
             </div>
         </div>
         
         <div class="nav-bar">
-            <a href="./index.html">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html">Kontakto</a>
+            <a href="./index.html" data-translate="home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
         </div>
         
         <div class="social">
@@ -120,7 +128,7 @@
         </div>
         
         <div>
-            <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
+            <h5 data-translate="all_rights">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
 
@@ -172,7 +180,7 @@ AOS.init();
 </script>
     <script src="/js/breadcrumbs.js"></script>
 
-    <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
+<script src="/js/translations.js"></script>
 <script src="../js/js.js"></script>
 <script src="../js/search.js"></script>
 </body>

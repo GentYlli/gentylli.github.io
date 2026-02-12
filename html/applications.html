@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -58,8 +66,8 @@
     <div class="hero-solutions">
         <img src="/images/applications/RS_ADAGIO_Alpha_Plus_CF_heroteaserbg_M.webp" alt="">
         <div class="hero-text-solutions">
-            <h1><b><i>Ceiling Materials</i></b></h1>
-            <h3><b><i>A comprehensive range of elegant ceiling solutions to elevate interiors</i></b></h3>
+            <h1><b><i data-translate="app_hero_title">Ceiling Materials</i></b></h1>
+            <h3><b><i data-translate="app_hero_subtitle">A comprehensive range of elegant ceiling solutions to elevate interiors</i></b></h3>
 
         </div>
     </div>
@@ -67,8 +75,8 @@
     <div class="segments">
         <div class="paragraph">
             <div class="paragraph-col">
-                <b><i>Ceilings for Any Space or Style</i></b>
-                <p>Our wide-ranging multi-material ceiling portfolio offers aesthetic freedom and outstanding
+                <b><i data-translate="app_ceilings_title">Ceilings for Any Space or Style</i></b>
+                <p data-translate="app_ceilings_p">Our wide-ranging multi-material ceiling portfolio offers aesthetic freedom and outstanding
                  performance to perfect any interior. Choose from an extensive selection that covers every
                  requirement – from diverse ceiling and grid systems to dramatic floating baffles and canopies.</p>
             </div>
@@ -76,8 +84,8 @@
 
         <div class="paragraph center">
             <div class="paragraph-col">
-                <b><i>Ceiling Solutions</i></b>
-                <p>With our rich variety of ceiling materials, we can tailor the perfect solution for your specific
+                <b><i data-translate="app_solutions_title">Ceiling Solutions</i></b>
+                <p data-translate="app_solutions_p">With our rich variety of ceiling materials, we can tailor the perfect solution for your specific
                  design concept and performance requirements.</p>
                 <div class="card-solution">
 
@@ -87,9 +95,9 @@
                                 <img src="/images/applications/Mat-Ceiling_BE-Sint-Clara-College_CF_4x3_S.webp" alt="">
                             </div>
                             <div class="card-text short">
-                                <h2>Mineral</h2><br>
-                                <p>Create stunning, serene interiors with our smooth, white, and bright mineral ceilings in endless designs.</p>
-                                <a href="/html/mineral.html" class="a-link"><b>Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
+                                <h2 data-translate="app_mineral">Mineral</h2><br>
+                                <p data-translate="app_mineral_desc">Create stunning, serene interiors with our smooth, white, and bright mineral ceilings in endless designs.</p>
+                                <a href="/html/mineral.html" class="a-link"><b data-translate="see_more">Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </a>
                     </div>
@@ -100,9 +108,9 @@
                                 <img src="/images/applications/rs_kcs_picture_ch_sihlcity_mall_zurich_CF_4x3_S.webp" alt="">
                             </div>
                             <div class="card-text short">
-                                <h2>Metal</h2><br>
-                                <p>Combine bold aesthetics with innovative performance through durable metal ceilings in extensive colours, shapes, and perforations.</p>
-                                <a href="/html/metal.html" class="a-link"><b>Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
+                                <h2 data-translate="app_metal">Metal</h2><br>
+                                <p data-translate="app_metal_desc">Combine bold aesthetics with innovative performance through durable metal ceilings in extensive colours, shapes, and perforations.</p>
+                                <a href="/html/metal.html" class="a-link"><b data-translate="see_more">Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </a>
                     </div>
@@ -113,9 +121,9 @@
                                 <img src="/images/applications/Mat-Ceiling_PL-Primary-School_CF_4x3_S.webp" alt="">
                             </div>
                             <div class="card-text short">
-                                <h2>Wood Wool</h2><br>
-                                <p>Achieve elegance and acoustic harmony with sophisticated, sustainable HERADESIGN® wood wool ceilings in a wide range of shapes and colours.</p>
-                                <a href="/html/wood-wool.html" class="a-link"><b>Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
+                                <h2 data-translate="app_wood_wool">Wood Wool</h2><br>
+                                <p data-translate="app_wood_wool_desc">Achieve elegance and acoustic harmony with sophisticated, sustainable HERADESIGN® wood wool ceilings in a wide range of shapes and colours.</p>
+                                <a href="/html/wood-wool.html" class="a-link"><b data-translate="see_more">Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </a>
                     </div>
@@ -126,9 +134,9 @@
                                 <img src="/images/applications/RS_VARIOLINE-Wood-Acoustic-19_CF_4x3_S.webp" alt="">
                             </div>
                             <div class="card-text short">
-                                <h2>Wood Design</h2><br>
-                                <p>Invite nature indoors with wood design ceilings that beautifully capture the look and warmth of natural wood.</p>
-                                <a href="/html/wood-design.html" class="a-link"><b>Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
+                                <h2 data-translate="app_wood_design">Wood Design</h2><br>
+                                <p data-translate="app_wood_design_desc">Invite nature indoors with wood design ceilings that beautifully capture the look and warmth of natural wood.</p>
+                                <a href="/html/wood-design.html" class="a-link"><b data-translate="see_more">Learn more</b> <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </a>
                     </div>
@@ -142,8 +150,8 @@
                 <img src="/images/applications/CU_MERIDIAN_DX_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Complementary Suspension Systems</b>
-                <p>For a perfectly balanced result, combine your preferred ceiling material with our
+                <b data-translate="app_suspension_title">Complementary Suspension Systems</b>
+                <p data-translate="app_suspension_p">For a perfectly balanced result, combine your preferred ceiling material with our
                  high-performance ceiling suspension systems. Our innovative solutions seamlessly integrate with
                  various service elements, including lighting, heating, ventilation, and air conditioning.</p>
             </div>
@@ -154,8 +162,8 @@
                 <img src="/images/applications/Mat-Ceiling_DE-Klimahaus-Bremerhaven_CF_4x3_L.webp" class="img" alt=""/>
             </div>
             <div class="separate">
-                <b>Customised Ceiling Design</b>
-                <p>We offer complete freedom to mix and match materials, colours, and shapes. With our Vario
+                <b data-translate="app_custom_title">Customised Ceiling Design</b>
+                <p data-translate="app_custom_p">We offer complete freedom to mix and match materials, colours, and shapes. With our Vario
                  Design offer, you can choose from a stylish palette of eight nature-inspired hues, available
                  across all materials.</p>
             </div>
@@ -171,23 +179,23 @@
         <div class="footer-info">
             <div class="footer-column">
                 <h4>Luli Gips</h4>
-                <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
             </div>
             <div class="footer-column">
-                <h4>Kontakt</h4>
+                <h4 data-translate="contact">Kontakt</h4>
                 <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
                 <p><i class="fas fa-envelope"></i> info@luligips.al</p>
                 <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
             </div>
             <div class="footer-column">
-                <h4>Orari i Punës</h4>
-                <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-                <p>E Diel: Mbyllur</p>
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
             </div>
         </div>
         
         <div class="nav-bar">
-            <a href="./index.html">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html">Kontakto</a>
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
         </div>
         
         <div class="social">
@@ -196,7 +204,7 @@
         </div>
         
         <div>
-            <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
 
@@ -207,6 +215,7 @@
 
     <script src="../js/js.js"></script>
 
+    <script src="/js/translations.js"></script>
     <script src="/js/breadcrumbs.js"></script>
     <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
 </body>

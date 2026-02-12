@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -58,7 +66,7 @@
     <div class="hero-solutions hero-short">
         <img src="/images/solutions/office/Header-Office-PL-Hines-Polska-Warsaw_CF_background_L.webp" alt="">
         <div class="hero-text-solutions">
-            <h1><b><i>Ceilings for Office Buildings</i></b></h1>
+            <h1><b><i data-translate="office_hero_title">Ceilings for Office Buildings</i></b></h1>
         </div>
     </div>
 
@@ -66,8 +74,8 @@
         
         <div class="paragraph">
             <div class="paragraph-col">
-                <b><i>Intelligent Interiors That Bring Focus To Work </i></b>
-                <p>There are two important criteria to consider when selecting ceiling systems for office buildings:
+                <b><i data-translate="office_intro_title">Intelligent Interiors That Bring Focus To Work </i></b>
+                <p data-translate="office_intro_p">There are two important criteria to consider when selecting ceiling systems for office buildings:
                  corporate personality and employee productivity. Our solutions cover both.
                  We offer an unrivalled choice of multi-material modular or floating ceilings and wall panels to portray the unique character of any business.
                  Whatever your choice, our high-performance solutions ensure optimum acoustic and visual comfort to enhance concentration, communication,
@@ -77,7 +85,7 @@
 
         <div class="paragraph">
             <div class="benefits-col">
-                <b><i>Benefits of Our Ceilings for Offices</i></b>
+                <b><i data-translate="office_benefits_title">Benefits of Our Ceilings for Offices</i></b>
 
                 <div class="benefits-row">
 
@@ -86,8 +94,8 @@
                             <img src="/images/solutions/benefits/Icon_sound_absorption-1.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Comfortable acoustics</span>
-                            <span class="par">Balanced acoustic environments enhance occupant comfort,
+                            <span class="head" data-translate="benefit_acoustics_title">Comfortable acoustics</span>
+                            <span class="par" data-translate="benefit_acoustics_desc">Balanced acoustic environments enhance occupant comfort,
                              aid speech intelligibility, and support privacy.
                              Our ceiling materials offer high sound absorption for clear communication and optimal
                              sound attenuation to reduce distractions between rooms.</span>
@@ -99,8 +107,8 @@
                             <img src="/images/solutions/benefits/Icon_light_reflection.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">High light reflectance</span>
-                            <span class="par">Natural light has a positive effect on human mood and productivity.
+                            <span class="head" data-translate=" benefit_light_title">High light reflectance</span>
+                            <span class="par" data-translate=" benefit_light_desc">Natural light has a positive effect on human mood and productivity.
                                 Returning up to 88% of light (versus 75% with standard ceilings),
                                  our ceiling tiles enhance occupant wellbeing and reduce the need for artificial lighting,
                                  thus also saving energy.</span>
@@ -112,8 +120,8 @@
                             <img src="/images/solutions/benefits/Icon_indoor_air_quality.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Safe air quality</span>
-                            <span class="par">High volatile organic compound (VOC) levels can impact occupant health.
+                            <span class="head" data-translate="benefit_air_title">Safe air quality</span>
+                            <span class="par" data-translate="benefit_air_desc">High volatile organic compound (VOC) levels can impact occupant health.
                             Most of our ceiling materials are certified by Eurofins Indoor Air Comfort®
                              and Indoor Air Comfort® Gold to have low or very low VOC emissions.</span>
                         </div>
@@ -128,8 +136,8 @@
                 <img src="/images/solutions/office/RS_Armstrong_MESH.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Open Offices & Collaboration Areas</b>
-                <p>Keep decibels and distractions to a minimum in open-plan workspaces
+                <b data-translate="office_open_title">Open Offices & Collaboration Areas</b>
+                <p data-translate="office_open_p">Keep decibels and distractions to a minimum in open-plan workspaces
                  with our acoustically balanced office ceiling tiles and wall panels.</p>
             </div>
         </div>
@@ -139,8 +147,8 @@
                 <img src="/images/solutions/office/Office-Private-Office-PL-Takeda-Warsaw_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Private Offices</b>
-                <p>Make sure important conversations remain private with ceiling systems that offer
+                <b data-translate="office_private_title">Private Offices</b>
+                <p data-translate="office_private_p">Make sure important conversations remain private with ceiling systems that offer
                  both sound absorption and sound attenuation.</p>
             </div>
         </div>
@@ -150,8 +158,8 @@
                 <img src="/images/solutions/office/Office-Lobbies-CZ-IBM_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Lobbies & Reception Areas</b>
-                <p>Design inviting spaces with modular ceilings, canopies, baffles,
+                <b data-translate="office_lobbies_title">Lobbies & Reception Areas</b>
+                <p data-translate="office_lobbies_p">Design inviting spaces with modular ceilings, canopies, baffles,
                  and wall systems in an elegant range of materials, styles, and colours.</p>
             </div>
         </div>
@@ -161,8 +169,8 @@
                 <img src="/images/solutions/office/Office-Meeting-room.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Meeting & Conference Rooms</b>
-                <p>Our materials and designs set the stage for productive meetings by ensuring everyone is heard,
+                <b data-translate="office_meeting_title">Meeting & Conference Rooms</b>
+                <p data-translate="office_meeting_p">Our materials and designs set the stage for productive meetings by ensuring everyone is heard,
                  while keeping private discussions behind closed doors.</p>
             </div>
         </div>
@@ -172,8 +180,8 @@
                 <img src="/images/solutions/office/RS_Armstrong_MESH_F-Clip.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Corridors</b>
-                <p>In high-traffic areas, our ceiling tiles help lower the volume but keep people
+                <b data-translate="office_corridors_title">Corridors</b>
+                <p data-translate="office_corridors_p">In high-traffic areas, our ceiling tiles help lower the volume but keep people
                  flowing through flexible designs that connect spaces seamlessly.</p>
             </div>
         </div>
@@ -183,8 +191,8 @@
                 <img src="/images/solutions/office/Office-Cafeteria-PL-Stiegelmeye.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Cafeterias </b>
-                <p>Create an enjoyable, comfortable atmosphere for colleagues by minimising office buzz
+                <b data-translate="office_cafeterias_title">Cafeterias </b>
+                <p data-translate="office_cafeterias_p">Create an enjoyable, comfortable atmosphere for colleagues by minimising office buzz
                  with high-quality ceiling tiles and floating systems.</p>
             </div>
         </div>
@@ -196,18 +204,40 @@
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
 
-    <div class="footer">
-        <div class="nav-bar">
-            <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html">Kontakto</a>
+<div class="footer">
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
+            </div>
         </div>
+        
+        <div class="nav-bar">
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
+        </div>
+        
         <div class="social">
             <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
+        
         <div>
-            <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
+    
+<script src="/js/translations.js"></script>
     <script src="../js/js.js"></script>
 
     <script src="/js/breadcrumbs.js"></script>

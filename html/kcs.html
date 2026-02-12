@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -59,10 +67,10 @@
         <div class="hero-left">
             <img src="/images/kcs/stage_brand_bg.png" alt="Interior space" class="interior-image"/>
           <div class="hero-text">
-            <h1>Welcome to Knauf Ceiling Solutions</h1>
-            <h5>Elevate your interiors with an infinite variety of high-performance ceiling materials</h5>
+            <h1 data-translate="kcs_hero_title">Welcome to Knauf Ceiling Solutions</h1>
+            <h5 data-translate="kcs_hero_subtitle">Elevate your interiors with an infinite variety of high-performance ceiling materials</h5>
             <div class="buttons">
-              <a href="/html/solutions.html" class="btn outline">Explore Solutions</a>
+              <a href="/html/solutions.html" class="btn outline" data-translate="kcs_explore_solutions">Explore Solutions</a>
             </div>
           </div>
         </div>
@@ -75,9 +83,9 @@
         
         <div class="paragraph">
             <div class="paragraph-col">
-                <b><i>Any ceiling you conceive, we create</i></b>
-                <p>As a world-leader in premium ceiling solutions, we view ceilings not as a boundary of a space, but as an extension of your creativity. Whatever your inspiration, we offer a range of multi-material ceiling and wall solutions in various shapes, textures, and colours to achieve your design ambitions.</p>
-                <p>Discover how our unrivalled portfolio of mineral, metal, wood wool, and wood design ceiling materials can elevate your vision.</p>
+                <b><i data-translate="kcs_intro_title">Any ceiling you conceive, we create</i></b>
+                <p data-translate="kcs_intro_p1">As a world-leader in premium ceiling solutions, we view ceilings not as a boundary of a space, but as an extension of your creativity. Whatever your inspiration, we offer a range of multi-material ceiling and wall solutions in various shapes, textures, and colours to achieve your design ambitions.</p>
+                <p data-translate="kcs_intro_p2">Discover how our unrivalled portfolio of mineral, metal, wood wool, and wood design ceiling materials can elevate your vision.</p>
             </div>
         </div>
 
@@ -86,11 +94,11 @@
                 <img src="/images/kcs/KCS_Division_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Ceiling systems for work, play, living, or healing</b>
-                <p>
+                <b data-translate="kcs_work_title">Ceiling systems for work, play, living, or healing</b>
+                <p data-translate="kcs_work_p">
                     Offices must be quiet, hospitals clean, and gyms durable. Every space has specific requirements that influence ceiling selection. Through our comprehensive range and experienced teams, we’ll help you find the optimal solution with performance characteristics that are tailor-made for the space you plan to create.  
                 </p>
-                <a href="/html/solutions.html" class="a-link"><b>Explore Solutions</b> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/html/solutions.html" class="a-link"><b data-translate="kcs_explore_solutions">Explore Solutions</b> <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -99,9 +107,9 @@
                 <img src="/images/kcs/RS_MINERAL-Baffle-Element_CF_4x3_L.webp" class="img" alt=""/>
             </div>
             <div class="separate">
-                <b>New heights of versatility with multi-material ceilings</b>
-                <p>Whether your interior design foresees modular ceiling systems, floating ceilings, or wall panels, our expansive selection of high-quality materials gives you complete freedom to turn your creativity into reality.</p>
-                <a href="/html/applications.html" class="a-link"><b>Explore Applications</b> <i class="fa-solid fa-arrow-right"></i></a>
+                <b data-translate="kcs_versatility_title">New heights of versatility with multi-material ceilings</b>
+                <p data-translate="kcs_versatility_p">Whether your interior design foresees modular ceiling systems, floating ceilings, or wall panels, our expansive selection of high-quality materials gives you complete freedom to turn your creativity into reality.</p>
+                <a href="/html/applications.html" class="a-link"><b data-translate="kcs_explore_applications">Explore Applications</b> <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -110,22 +118,22 @@
                 <img src="/images/kcs/PL_Varso_Tower__Warsaw__5_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Sustainable ceilings for responsible design</b>
-                <p>Our sustainability also impacts yours. To support responsible design, we are continuously expanding our range of products awarded under the Cradle to Cradle Certified® programme. The comprehensive and rigorous system allows us to assess and improve the safety, health, and circularity of our ceiling materials, so they are better for your projects – today and tomorrow.</p>
+                <b data-translate="kcs_sustainable_title">Sustainable ceilings for responsible design</b>
+                <p data-translate="kcs_sustainable_p">Our sustainability also impacts yours. To support responsible design, we are continuously expanding our range of products awarded under the Cradle to Cradle Certified® programme. The comprehensive and rigorous system allows us to assess and improve the safety, health, and circularity of our ceiling materials, so they are better for your projects – today and tomorrow.</p>
             </div>
         </div>
 
         <div class="paragraph center" >
-            <b><i>Downloads</i></b>
+            <b><i data-translate="kcs_downloads">Downloads</i></b>
             <div class="card">
                 <a href="/html/document-center.html" class="card-link">
                     <div class="card-img">
                         <img src="/images/kcs/Visu-Card-downloads-mockup-knauf_CF_4x3_S.webp" alt="">
                     </div>
                     <div class="card-text">
-                        <h2>Document Center</h2><br>
-                        <p>Download importent documentson our ceiling system materials, includingtechnival data sheets, brochures, Declarations of Performance(DoP), and intallation guides.</p>
-                        <a href="/html/document-center.html" class="a-link"><b>Access Documents</b> <i class="fa-solid fa-arrow-right"></i></a>
+                        <h2 data-translate="kcs_doc_center">Document Center</h2><br>
+                        <p data-translate="kcs_doc_desc">Download importent documentson our ceiling system materials, includingtechnival data sheets, brochures, Declarations of Performance(DoP), and intallation guides.</p>
+                        <a href="/html/document-center.html" class="a-link"><b data-translate="kcs_access_docs">Access Documents</b> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </a>
             </div>
@@ -137,19 +145,41 @@
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
 
-    <div class="footer">
-        <div class="nav-bar">
-            <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html">Kontakto</a>
+<div class="footer">
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
+            </div>
         </div>
+        
+        <div class="nav-bar">
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
+        </div>
+        
         <div class="social">
             <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
+        
         <div>
-            <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
+    
     <script src="../js/js.js"></script>
+<script src="/js/translations.js"></script>
 
     <script src="/js/breadcrumbs.js"></script>
 </body>

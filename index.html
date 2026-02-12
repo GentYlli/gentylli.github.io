@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,30 +29,38 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index.html">Kryefaqja</a>
-        <a href="./html/gips.html">Gips</a>
-        <a href="./html/bojera.html">Bojera</a>
-        <a href="./html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="./html/kapot.html">Kapot</a>        
-        <a href="./html/pft.html">PFT</a>
-        <a href="./html/kontakto.html">Kontakto</a>
+        <a href="./index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="./html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="./html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="./html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="./html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="./html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="./html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
     <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="./index.html"><img src="./images/luligips.png" alt="Knauf - Produkte Gipsi"></a>
+            <a href="./index.html"><img src="./images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="./html/gips.html">Gips</a>
-                        <a href="./html/bojera.html">Bojera</a>
-                        <a href="./html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="./html/kapot.html">Kapot</a>
-                        <a href="./html/pft.html">PFT</a>
+                        <a href="./html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="./html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="./html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="./html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="./html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="./html/kontakto.html" class="border">Kontakto</a>
+            <a href="./html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -74,11 +82,10 @@
                 <h1>LULI GIPS</h1>
             </div>
             <div class="intro-p" id="intro-p">
-                <p><!--Our online paint store offers a wide range of high-quality paints and accessories to help you achieve the perfect finish for your next project. In addition, we carry a variety of gypsum products to meet all of your construction needs.-->
-                    Dyqani ynë ofron një gamë të gjerë të bojrave të cilësisë së lartë për t'ju ndihmuar të arrini përfundimin perfekt për projektin tuaj të ardhshëm. Përveç kësaj, ne kemi në dispozicion një shumëllojshmëri të produkteve të gipsit për të përmbushur të gjitha nevojat tuaja në ndërtim.</p>
+                <p data-translate="intro_description">Dyqani ynë ofron një gamë të gjerë të bojrave të cilësisë së lartë për t'ju ndihmuar të arrini përfundimin perfekt për projektin tuaj të ardhshëm. Përveç kësaj, ne kemi në dispozicion një shumëllojshmëri të produkteve të gipsit për të përmbushur të gjitha nevojat tuaja në ndërtim.</p>
             </div>
             <div class="intro-btn" id="intro-btn">
-                <a href="./html/gips.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="400">Gips</a><a href="./html/bojera.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="250">Bojera</a><a href="./html/kapot.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="100">Kapot</a>
+                <a href="./html/gips.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="400" data-translate="nav_gips">Gips</a><a href="./html/bojera.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="250" data-translate="nav_paints">Bojera</a><a href="./html/kapot.html" data-aos="fade-right" data-aos-offset="100" data-aos-duration="700" data-aos-delay="100" data-translate="nav_kapot">Kapot</a>
             </div>
         </div>
     </div>
@@ -115,72 +122,29 @@
             </div>
             <div class="pershkrim-txt" id="pershkrim-txt" data-aos="zoom-in" data-aos-offset="250" data-aos-duration="700">
                 <div class="pershkrim-title1">
-                    <h2>Rreth nesh.</h2>
+                    <h2 data-translate="about_title">Rreth nesh.</h2>
                 </div>
                 <div class="pershkrim-title2">
-                    <h2><!--Discover Our World of Paints and Gypsum Products-->
-                        Zbuloni Botën Tonë të Bojrave dhe Produkteve të Gipsit.</h2>
+                    <h2 data-translate="about_subtitle">Zbuloni Botën Tonë të Bojrave dhe Produkteve të Gipsit.</h2>
                 </div>
                 <div class="pershkrim-p">
-                    <p><!--At LULI GIPS, we are dedicated to providing high-quality paints and gypsum products to meet all of your construction needs. Our expert team is committed to helping you achieve the perfect finish for your next project, ensuring exceptional quality at every step.-->
-                        Tek LULI GIPS, jemi të përkushtuar në furnizimin e bojrave dhe produkteve të gipsit të cilësisë së lartë për të përmbushur të gjitha nevojat tuaja në ndërtim. Ekipi ynë i ekspertëve është i përkushtuar për t'ju ndihmuar të arrini përfundimin perfekt për projektin tuaj të ardhshëm, duke siguruar cilësi të jashtëzakonshme në çdo hap.</p>
+                    <p data-translate="about_text">Tek LULI GIPS, jemi të përkushtuar në furnizimin e bojrave dhe produkteve të gipsit të cilësisë së lartë për të përmbushur të gjitha nevojat tuaja në ndërtim. Ekipi ynë i ekspertëve është i përkushtuar për t'ju ndihmuar të arrini përfundimin perfekt për projektin tuaj të ardhshëm, duke siguruar cilësi të jashtëzakonshme në çdo hap.</p>
                 </div>
             </div>
         </div>
     </div>
-<!--
-<section>
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide--one" id="swiper-slide">
-            <div>
-            </div>
-        </div>
-        <div class="swiper-slide swiper-slide--two" id="swiper-slide">
-          <div>
-          </div>
-        </div>
-  
-        <div class="swiper-slide swiper-slide--three" id="swiper-slide">
-          <div>
-          </div>
-        </div>
-  
-        <div class="swiper-slide swiper-slide--four" id="swiper-slide">
-          <div>
-          </div>
-        </div>
-  
-        <div class="swiper-slide swiper-slide--five" id="swiper-slide">
-            <div>
-            </div>
-        </div>
-    </div>
-      <div class="swiper-pagination"> </div>
-    </div>
-</section>
--->
 
     <div class="keypoints" >
         <div class="keypoints-row" id="keypoints-row">
-            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700"><p>1.Cilësi e garantuar - Punojmë vetëm me brendet më të mira evropiane si Knauf, Vivechrom, Dinova, AMF, KCS dhe PFT për të siguruar standarde të larta në çdo projekt.</p></div>
-            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700" data-aos-delay="200"><p>2. Shërbim profesional - Ekipi ynë i ekspertëve është gjithmonë gati t'ju këshillojë për zgjedhjen e produkteve të duhura dhe për të ju ndihmuar me projektet tuaja.</p></div>
+            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700"><p data-translate="keypoint_1">1. Cilësi e garantuar - Punojmë vetëm me brendet më të mira evropiane si Knauf, Vivechrom, Dinova, AMF, KCS dhe PFT për të siguruar standarde të larta në çdo projekt.</p></div>
+            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700" data-aos-delay="200"><p data-translate="keypoint_2">2. Shërbim profesional - Ekipi ynë i ekspertëve është gjithmonë gati t'ju këshillojë për zgjedhjen e produkteve të duhura dhe për të ju ndihmuar me projektet tuaja.</p></div>
         </div>
         <div class="keypoints-row" id="keypoints-row">
-            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700"><p>3. Gamë e gjerë produktesh - Nga gipsi dhe bojërat deri te tavanet e varura dhe sisteme të avancuara PFT, kemi gjithçka që ju nevojitet për ndërtim dhe rinovim.</p></div>
-            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700" data-aos-delay="200"><p>4. Çmime konkurruese - Ofrojmë çmime të arsyeshme pa kompromentuar cilësinë, me zbritje speciale për kontraktorë dhe blerje me shumicë.</p></div>
+            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700"><p data-translate="keypoint_3">3. Gamë e gjerë produktesh - Nga gipsi dhe bojërat deri te tavanet e varura dhe sisteme të avancuara PFT, kemi gjithçka që ju nevojitet për ndërtim dhe rinovim.</p></div>
+            <div class="box" id="box" data-aos="fade-up" data-aos-offset="100" data-aos-duration="700" data-aos-delay="200"><p data-translate="keypoint_4">4. Çmime konkurruese - Ofrojmë çmime të arsyeshme pa kompromentuar cilësinë, me zbritje speciale për kontraktorë dhe blerje me shumicë.</p></div>
         </div>
     </div>
-<!--
-    <div class="frazime" id="frazime">
-        <div class="img-show" id="img-show" data-aos="fade-up">
-            <img src="./images/img1.jpg" alt="" id="myImage">
-        </div>
-        <div class="frazime-pershkrim" id="frazime-pershkrim" data-aos="fade-up" data-aos-delay="200">
-            <p>adnckjsnmdmhjksm dkn ldjs  dkncj sdcceiun echjna jhacjasc</p>
-        </div>
-    </div>
--->
+
     <div class="shop">
         <button class="shop-nav shop-prev" aria-label="Shko mbrapa" type="button">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -194,16 +158,16 @@
                     <div class="kategori-full" data-aos="fade-up" data-aos-delay="0">
                         <div class="kategori">
                             <div class="kategori-img"><img src="./images/pllaka/GKB.png" alt="Gips - Boards"></div>
-                            <div class="kategori-emri">Gips</div>
-                            <div class="kategori-sub">Pllaka &amp; Profile</div>
+                            <div class="kategori-emri" data-translate="nav_gips">Gips</div>
+                            <div class="kategori-sub" data-translate="cat_gips_sub">Pllaka & Profile</div>
 
                             <div class="kategori-preview" aria-hidden="true">
                                 <div class="preview-inner">
                                     <div class="preview-img"><img src="./images/pllaka/GKB.png" alt="Gips sample"></div>
                                     <div class="preview-text">
-                                        <div class="preview-title">Zgjidhje për ndërtim të brendshëm</div>
-                                        <div class="preview-desc">Pllaka gipsi dhe profile të qëndrueshme për mure dhe tavane.</div>
-                                        <div class="preview-actions"><button class="preview-link" data-href="./html/gips.html">Shiko më shumë</button></div>
+                                        <div class="preview-title" data-translate="cat_gips_title">Zgjidhje për ndërtim të brendshëm</div>
+                                        <div class="preview-desc" data-translate="cat_gips_desc">Pllaka gipsi dhe profile të qëndrueshme për mure dhe tavane.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/gips.html" data-translate="see_more">Shiko më shumë</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -218,16 +182,16 @@
                     <div class="kategori-full" data-aos="fade-up" data-aos-delay="60">
                         <div class="kategori">
                             <div class="kategori-img"><img src="./images/vivechrom/vivechrom-vive-emulsion.png" alt="Bojera - Vivechrom"></div>
-                            <div class="kategori-emri">Bojera</div>
-                            <div class="kategori-sub">Boje &amp; Mbarime</div>
+                            <div class="kategori-emri" data-translate="nav_paints">Bojera</div>
+                            <div class="kategori-sub" data-translate="cat_paints_sub">Boje & Mbarime</div>
 
                             <div class="kategori-preview" aria-hidden="true">
                                 <div class="preview-inner">
                                     <div class="preview-img"><img src="./images/vivechrom/vivechrom-vive-emulsion.png" alt="Bojera sample"></div>
                                     <div class="preview-text">
-                                        <div class="preview-title">Veshje dhe mbrojtje</div>
-                                        <div class="preview-desc">Boje profesionale me ngjyra të qëndrueshme dhe mbarime elegante.</div>
-                                        <div class="preview-actions"><button class="preview-link" data-href="./html/bojera.html">Shiko më shumë</button></div>
+                                        <div class="preview-title" data-translate="cat_paints_title">Veshje dhe mbrojtje</div>
+                                        <div class="preview-desc" data-translate="cat_paints_desc">Boje profesionale me ngjyra të qëndrueshme dhe mbarime elegante.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/bojera.html" data-translate="see_more">Shiko më shumë</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -242,16 +206,16 @@
                     <div class="kategori-full" data-aos="fade-up" data-aos-delay="120">
                         <div class="kategori">
                             <div class="kategori-img"><img src="./images/kcs/RS_ADAGIO_Alpha_Plus_CF_heroteaserbg_M.webp" alt="KCS - Project"></div>
-                            <div class="kategori-emri">KCS</div>
-                            <div class="kategori-sub">Tavane të Varura</div>
+                            <div class="kategori-emri" data-translate="nav_kcs">KCS</div>
+                            <div class="kategori-sub" data-translate="cat_kcs_sub">Tavane të Varura</div>
 
                             <div class="kategori-preview" aria-hidden="true">
                                 <div class="preview-inner">
                                     <div class="preview-img"><img src="./images/kcs/RS_ADAGIO_Alpha_Plus_CF_heroteaserbg_M.webp" alt="KCS sample"></div>
                                     <div class="preview-text">
-                                        <div class="preview-title">Sisteme tavani modulare</div>
-                                        <div class="preview-desc">Tavane të lehta dhe estetike për ambiente komerciale dhe shërbime.</div>
-                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kcs.html">Shiko më shumë</button></div>
+                                        <div class="preview-title" data-translate="cat_kcs_title">Sisteme tavani modulare</div>
+                                        <div class="preview-desc" data-translate="cat_kcs_desc">Tavane të lehta dhe estetike për ambiente komerciale dhe shërbime.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kcs.html" data-translate="see_more">Shiko më shumë</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -266,16 +230,16 @@
                     <div class="kategori-full" data-aos="fade-up" data-aos-delay="180">
                         <div class="kategori">
                             <div class="kategori-img"><img src="./images/stuko/knauf-biofinish.png" alt="Kapot - Finish"></div>
-                            <div class="kategori-emri">Kapot</div>
-                            <div class="kategori-sub">Shtukaturë &amp; Mbarime</div>
+                            <div class="kategori-emri" data-translate="nav_kapot">Kapot</div>
+                            <div class="kategori-sub" data-translate="cat_kapot_sub">Shtukaturë & Mbarime</div>
 
                             <div class="kategori-preview" aria-hidden="true">
                                 <div class="preview-inner">
                                     <div class="preview-img"><img src="./images/stuko/knauf-biofinish.png" alt="Kapot sample"></div>
                                     <div class="preview-text">
-                                        <div class="preview-title">Mbarime dekorative</div>
-                                        <div class="preview-desc">Shtukatura dhe mbarime për sipërfaqe të brendshme dhe fasada.</div>
-                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kapot.html">Shiko më shumë</button></div>
+                                        <div class="preview-title" data-translate="cat_kapot_title">Mbarime dekorative</div>
+                                        <div class="preview-desc" data-translate="cat_kapot_desc">Shtukatura dhe mbarime për sipërfaqe të brendshme dhe fasada.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/kapot.html" data-translate="see_more">Shiko më shumë</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -290,16 +254,16 @@
                     <div class="kategori-full" data-aos="fade-up" data-aos-delay="240">
                         <div class="kategori">
                             <div class="kategori-img"><img src="./images/pft.png" alt="PFT"></div>
-                            <div class="kategori-emri">PFT</div>
-                            <div class="kategori-sub">Shtukatura &amp; Sisteme</div>
+                            <div class="kategori-emri" data-translate="nav_pft">PFT</div>
+                            <div class="kategori-sub" data-translate="cat_pft_sub">Shtukatura & Sisteme</div>
 
                             <div class="kategori-preview" aria-hidden="true">
                                 <div class="preview-inner">
                                     <div class="preview-img"><img src="./images/pft.png" alt="PFT sample"></div>
                                     <div class="preview-text">
-                                        <div class="preview-title">Sisteme komplekse</div>
-                                        <div class="preview-desc">Shtukatura dhe sisteme për izolim dhe estetikë profesionale.</div>
-                                        <div class="preview-actions"><button class="preview-link" data-href="./html/pft.html">Shiko më shumë</button></div>
+                                        <div class="preview-title" data-translate="cat_pft_title">Sisteme komplekse</div>
+                                        <div class="preview-desc" data-translate="cat_pft_desc">Shtukatura dhe sisteme për izolim dhe estetikë profesionale.</div>
+                                        <div class="preview-actions"><button class="preview-link" data-href="./html/pft.html" data-translate="see_more">Shiko më shumë</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -319,23 +283,23 @@
         <div class="footer-info">
             <div class="footer-column">
                 <h4>Luli Gips</h4>
-                <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi të cilësisë së lartë.</p>
             </div>
             <div class="footer-column">
-                <h4>Kontakt</h4>
-                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 69 573 1993</p>
                 <p><i class="fas fa-envelope"></i> info@luligips.al</p>
-                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Tiranë, Shqipëri</span></p>
             </div>
             <div class="footer-column">
-                <h4>Orari i Punës</h4>
-                <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-                <p>E Diel: Mbyllur</p>
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
             </div>
         </div>
         
         <div class="nav-bar">
-            <a href="./index.html">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html">Kontakto</a>
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="nav_contact">Kontakto</a>
         </div>
         
         <div class="social">
@@ -344,7 +308,7 @@
         </div>
         
         <div>
-            <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
+            <h5><span data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</span></h5>
         </div>
     </div>
 
@@ -357,10 +321,11 @@
 <script src="./js/js.js"></script>
 <script src="/js/breadcrumbs.js"></script>
 <script src="/js/shop-carousel.js"></script>
+<script src="/js/translations.js"></script>
 <script>
     AOS.init();
 
-    // Breadcrumb generator - builds breadcrumb from meta[name="breadcrumb"] or URL and tries to map breadcrumb labels to existing page links
+    // Breadcrumb generator
     (function() {
       function generateBreadcrumbs() {
         var nav = document.getElementById('breadcrumb-nav');
@@ -373,14 +338,14 @@
         } else {
           var path = location.pathname.replace(/\/$/, '');
           if (path === '' || path === '/index.html') {
-            segments = ['Kryefaqja'];
+            segments = [currentLang === 'sq' ? 'Kryefaqja' : 'Home'];
           } else {
             var parts = path.split('/').filter(Boolean);
             var last = parts[parts.length - 1];
             var name = last.replace('.html','').replace(/[-_]/g,' ');
             name = decodeURIComponent(name);
             name = name.charAt(0).toUpperCase() + name.slice(1);
-            segments = ['Kryefaqja', name];
+            segments = [currentLang === 'sq' ? 'Kryefaqja' : 'Home', name];
           }
         }
         function findHrefByText(text) {
@@ -397,7 +362,7 @@
           var li = document.createElement('li');
           li.className = 'breadcrumb-item';
           if (idx < segments.length - 1) {
-            var href = findHrefByText(seg) || (seg.toLowerCase() === 'kryefaqja' ? './index.html' : '#');
+            var href = findHrefByText(seg) || (seg.toLowerCase() === 'kryefaqja' || seg.toLowerCase() === 'home' ? './index.html' : '#');
             var a = document.createElement('a');
             a.setAttribute('href', href);
             a.textContent = seg;
@@ -416,7 +381,6 @@
         generateBreadcrumbs();
       }
     })();
-
 
 
     /*

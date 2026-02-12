@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="/public_html/html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="/html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -59,20 +67,20 @@
         <div class="column" id="column" data-aos="fade-right">
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-title">
-                <h3><p>Adresa</p></h3>
+                <h3><p data-translate="contact_address">Adresa</p></h3>
             </div>
             <div class="info-text">
-                <p><strong>1. </strong><a href="https://maps.app.goo.gl/oPBYU5kHusLZ3ub67" target="_blank" rel="noopener noreferrer">Rruga Thoma Kalefi<i class="fas fa-external-link-alt"></i></a></p>
-                <p style="font-size: 18px;">Prane urës së Shkumbinit</p>
-                <p><strong>2. </strong><a href="https://maps.app.goo.gl/VWovqqtzoq3Pjeyq5" target="_blank" rel="noopener noreferrer">Rruga Kozma Naska<i class="fas fa-external-link-alt"></i></a></p>
-                <p style="font-size: 18px;">Ish konservimi</p>
-                <p>Elbasan, Shqiperi</p>
+                <p><strong>1. </strong><a href="https://maps.app.goo.gl/oPBYU5kHusLZ3ub67" target="_blank" rel="noopener noreferrer" data-translate="contact_location1">Rruga Thoma Kalefi<i class="fas fa-external-link-alt"></i></a></p>
+                <p style="font-size: 18px;" data-translate="contact_near_bridge">Prane urës së Shkumbinit</p>
+                <p><strong>2. </strong><a href="https://maps.app.goo.gl/VWovqqtzoq3Pjeyq5" target="_blank" rel="noopener noreferrer" data-translate="contact_location2">Rruga Kozma Naska<i class="fas fa-external-link-alt"></i></a></p>
+                <p style="font-size: 18px;" data-translate="contact_old_conservation">Ish konservimi</p>
+                <p data-translate="contact_elbasan">Elbasan, Shqiperi</p>
             </div>
         </div>
         <div class="column" id="column" data-aos="fade-right" data-aos-delay="100">
             <i class="fas fa-address-book"></i>
             <div class="info-title">
-                <h3><p>Kontakt</p></h3>
+                <h3><p data-translate="contact_info">Kontakt</p></h3>
             </div>
             <div class="info-text">
                 <p><strong>Tel:</strong>+355686030829</p>
@@ -82,12 +90,12 @@
         <div class="column" id="column" data-aos="fade-right" data-aos-delay="200">
             <i class="far fa-clock"></i>
             <div class="info-title">
-                <h3><p>Orari</p></h3>
+                <h3><p data-translate="contact_hours">Orari</p></h3>
             </div>
             <div class="info-text">                
-                <p><strong>E Hënë - E Shtunë:</strong></p>
+                <p><strong data-translate="contact_weekdays">E Hënë - E Shtunë:</strong></p>
                 <p>07:00 - 16:00</p>
-                <p><strong>E dielë:</strong></p>
+                <p><strong data-translate="contact_sunday">E dielë:</strong></p>
                 <p>08:00 - 13:00</p>
             </div>
         </div>
@@ -95,13 +103,13 @@
 
     <!-- Google Maps Section -->
 <div class="map-section">
-    <h2 class="map-title">Na gjeni këtu</h2>
+    <h2 class="map-title" data-translate="contact_find_us">Na gjeni këtu</h2>
     
     <div class="maps-wrapper">
         
         <!-- Location 1 -->
         <div class="map-container">
-            <h3 class="location-name">LULI GiPS - Lokacioni 1</h3>
+            <h3 class="location-name" data-translate="contact_location_1">LULI GiPS - Lokacioni 1</h3>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24052.67964621311!2d20.0692718!3d41.0999142!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135043e9faa74d85%3A0x4bc9d8760c4a76bc!2sLULI%20GiPS!5e0!3m2!1sen!2s!4v1770303479191!5m2!1sen!2s"
                 width="100%" 
@@ -115,7 +123,7 @@
 
         <!-- Location 2 -->
         <div class="map-container">
-            <h3 class="location-name">LULI GiPS - Lokacioni 2</h3>
+            <h3 class="location-name" data-translate="contact_location_2">LULI GiPS - Lokacioni 2</h3>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d178.81233559185344!2d20.09356317390843!3d41.116874197660955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1770303771440!5m2!1sen!2s"
                 width="100%" 
@@ -132,18 +140,40 @@
 
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
-    <div class="footer">
-        <div class="nav-bar">
-            <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="/html/kontakto.html">Kontakto</a>
+<div class="footer">
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
+            </div>
         </div>
+        
+        <div class="nav-bar">
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
+        </div>
+        
         <div class="social">
             <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
+        
         <div>
-            <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
+    
+<script src="/js/translations.js"></script>
     <script src="../js/js.js"></script>
     <script>
         AOS.init();

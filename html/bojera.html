@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#004aad" />
-    <meta http-equiv="refresh" content="1200; url=../index.html">
-    <title>Luli Gips</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Bojëra Vivechrom & Dinova - Boje Profesionale | Luli Gips</title>
+    <meta name="description" content="Bojëra cilësore Vivechrom dhe Dinova: boje akrilike, plastike, fasade. Zgjidhje profesionale për brendësi dhe jashtësi.">
+    <meta name="keywords" content="bojëra, vivechrom, dinova, boje akrilike, boje fasade, Shqipëri">
+    
     <link rel="stylesheet" type="text/css" href="../style/style.css" />
     <script src="https://kit.fontawesome.com/25190ce31d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -23,31 +27,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="../index.html" class="border"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="../index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -64,15 +76,10 @@
 
     <div class="section" id="section">
         <div class="logos" data-aos="fade-down" data-aos-duration="500">
-            <img src="../images/vivechrom/vivechrom-logo.png" alt="">
-            <img src="../images/dinova/dinova-logo.png" alt="">
+            <img src="../images/vivechrom/vivechrom-logo.png" alt="Vivechrom Logo">
+            <img src="../images/dinova/dinova-logo.png" alt="Dinova Logo">
         </div>
-        <p id="paragraph" data-aos="fade-left">Sjellim tek ju dy emrat më të njohur të bojrave. Vivechrom, një lider i njohur në treg,
-     ofron gamën e tyre të larmishme të bojërave cilësore dhe inovative, duke sjellë në jetë projekte të shumëllojshme dizajni.
-     Në të njëjtën kohë, Dinova sjell për klientët tanë një kualitet të lartë të bojërave dhe produkteve dekorative,
-     duke ofruar zgjidhje të përsosur për çdo projekt. Bojrat e tyre përdorin teknologji të fundit dhe përbërës të zgjedhur
-     me kujdes për të siguruar rezultate të shkëlqyera dhe një pamje të qëndrueshme. Duke përdorur bojrat e Vivechrom dhe Dinova,
-     ofrojmë një përvojë të pakrahasueshme në krijimin e ambjenteve të bukura dhe të qëndrueshme.</p>
+        <p id="paragraph" data-aos="fade-left" data-translate="paints_intro">Sjellim tek ju dy emrat më të njohur të bojrave. Vivechrom, një lider i njohur në treg, ofron gamën e tyre të larmishme të bojërave cilësore dhe inovative, duke sjellë në jetë projekte të shumëllojshme dizajni. Në të njëjtën kohë, Dinova sjell për klientët tanë një kualitet të lartë të bojërave dhe produkteve dekorative, duke ofruar zgjidhje të përsosur për çdo projekt. Bojrat e tyre përdorin teknologji të fundit dhe përbërës të zgjedhur me kujdes për të siguruar rezultate të shkëlqyera dhe një pamje të qëndrueshme. Duke përdorur bojrat e Vivechrom dhe Dinova, ofrojmë një përvojë të pakrahasueshme në krijimin e ambjenteve të bukura dhe të qëndrueshme.</p>
     </div>
     
     <div class="bar"> 
@@ -87,7 +94,7 @@
     
         <!-- Product Search Bar -->
 <div class="search-container">
-    <input type="text" id="product-search" class="search-input" placeholder="Kërko produkte...">
+    <input type="text" id="product-search" class="search-input" placeholder="Kërko produkte..." data-translate-placeholder="search_products">
     <i class="fas fa-search search-icon"></i>
 </div>
 
@@ -102,37 +109,44 @@
 
 
 <div class="footer">
-    <div class="footer-info">
-        <div class="footer-column">
-            <h4>Luli Gips</h4>
-            <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi të cilësisë së lartë.</p>
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi të cilësisë së lartë.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 69 573 1993</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Tiranë, Shqipëri</span></p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <h4>Kontakt</h4>
-            <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
-            <p><i class="fas fa-envelope"></i> info@luligips.al</p>
-            <p><i class="fas fa-map-marker-alt"></i> Adresa juaj këtu</p>
+        
+        <div class="nav-bar">
+            <a href="../index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
         </div>
-        <div class="footer-column">
-            <h4>Orari i Punës</h4>
-            <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-            <p>E Diel: Mbyllur</p>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        
+        <div>
+            <h5><span data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</span></h5>
         </div>
     </div>
-    
-    <div class="nav-bar">
-        <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="/html/kontakto.html">Kontakto</a>
-    </div>
-    
-    <div class="social">
-        <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-    </div>
-    
-    <div>
-        <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
-    </div>
-</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/355695731993?text=Përshëndetje!%20Dua%20të%20pyes%20për%20produktet%20tuaja." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="/js/translations.js"></script>
         <script src="../js/js.js"></script>
         <script src="../js/bojera-data.js"></script>
         <script src="../js/search.js"></script>
@@ -149,6 +163,13 @@
    
    function showDiv(divId) {
     var divs = ["vivechrom", "dinova"];
+    var buttons = ["vivechrom-btn", "dinova-btn"];
+    
+    // Remove active class from all buttons
+    buttons.forEach(function(btnId) {
+      var btn = document.getElementById(btnId);
+      if (btn) btn.classList.remove('active');
+    });
    
    // Hide all divs
    divs.forEach(function(id) {
@@ -156,6 +177,10 @@
       document.getElementById(id).style.maxHeight = null;
    });
   
+   // Add active class to clicked button
+   var activeBtn = document.getElementById(divId + '-btn');
+   if (activeBtn) activeBtn.classList.add('active');
+   
    // Show the specified div
    document.getElementById(divId).style.overflow = document.getElementById(divId).style.overflow + "visible";
    document.getElementById(divId).style.maxHeight = document.getElementById(divId).scrollHeight + "px";
@@ -166,8 +191,8 @@
    AOS.init();
 
 </script>
+
    <script src="/js/breadcrumbs.js"></script>
-     <script src="../js/bojera-data.js"></script>
 
      <script>
 // Image Lightbox Functions
@@ -176,13 +201,13 @@ function openLightbox(imageSrc) {
   const lightboxImg = document.getElementById('lightbox-img');
   lightboxImg.src = imageSrc;
   lightbox.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
+  document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('active');
-  document.body.style.overflow = 'auto'; // Re-enable scrolling
+  document.body.style.overflow = 'auto';
 }
 
 // Close lightbox when clicking outside the image

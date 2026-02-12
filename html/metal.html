@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -58,7 +66,7 @@
     <div class="hero-solutions hero-short">
         <img src="/images/applications/metal/RS_METAL-Sky-Element-Clip_CF_background_L.webp" alt="">
         <div class="hero-text-solutions">
-            <h1><b><i>Metal Ceilings</i></b></h1>
+            <h1><b><i data-translate="metal_hero_title">Metal Ceilings</i></b></h1>
         </div>
     </div>
 
@@ -66,8 +74,8 @@
         
         <div class="paragraph">
             <div class="paragraph-col">
-                <b><i>Powerful Design</i></b>
-                <p>Our contemporary metal and mesh ceiling range unites durability with cutting-edge creativity.
+                <b><i: data-translate="metal_intro_title">Powerful Design</i></b>
+                <p data-translate="metal_intro_p">Our contemporary metal and mesh ceiling range unites durability with cutting-edge creativity.
                  Select from an incredible variety of colours, shapes, and perforations in classic lay-in
                  systems or special custom-made solutions.</p>
             </div>
@@ -75,7 +83,7 @@
 
         <div class="paragraph">
             <div class="benefits-col">
-                <b><i>Sustainability Benefits</i></b>
+                <b><i data-translate="metal_benefits_title">Sustainability Benefits</i></b>
 
                 <div class="benefits-row">
 
@@ -84,8 +92,8 @@
                             <img src="/images/solutions/benefits/Icon_Impact_Solutions.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Durability</span>
-                            <span class="par">Made of high-quality materials, our robust metal and mesh ceiling
+                            <span class="head" data-translate="benefit_durability_title">Durability</span>
+                            <span class="par" data-translate="benefit_durability_desc">Made of high-quality materials, our robust metal and mesh ceiling
                              solutions provide long-term durability, making them ideal for high traffic areas.</span>
                         </div>
                     </div>
@@ -95,8 +103,8 @@
                             <img src="/images/solutions/benefits/Icon_Circularity.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Circularity</span>
-                            <span class="par">Most of our metal and mesh ceilings are designed for circularity
+                            <span class="head" data-translate="benefit_circularity_title">Circularity</span>
+                            <span class="par" data-translate="benefit_circularity_desc">Most of our metal and mesh ceilings are designed for circularity
                              and feature Cradle to Cradle Certified® Silver accreditation.</span>
                         </div>
                     </div>
@@ -106,8 +114,8 @@
                             <img src="/images/solutions/benefits/Icon_sound_absorption-1.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Acoustics</span>
-                            <span class="par">The combination of sound absorption and attenuation balances
+                            <span class="head" data-translate="benefit_acoustics_title">Acoustics</span>
+                            <span class="par" data-translate="benefit_acoustics_desc">The combination of sound absorption and attenuation balances
                              acoustics to enhance occupant comfort, speech intelligibility, and privacy.</span>
                         </div>
                     </div>
@@ -118,8 +126,8 @@
 
         <div class="paragraph center">
             <div class="paragraph-col ">
-                <b><i>Metal Ceiling Solutions</i></b>
-                <p>Choose from our diverse range of metal and mesh ceiling materials to match the aesthetic and
+                <b><i data-translate="metal_solutions_title">Metal Ceiling Solutions</i></b>
+                <p data-translate="metal_solutions_p">Choose from our diverse range of metal and mesh ceiling materials to match the aesthetic and
                  architectural requirements of your project.</p>
             </div>
         </div>
@@ -129,8 +137,8 @@
                         <img src="/images/applications/metal//Mat-Ceiling-Metal_PL-Trumpf-Warsaw_CF_4x3_S.webp" alt="">
                     </div>
                     <div class="card-text short">
-                        <h2>Metal</h2>
-                        <p>Metal ceiling tiles range from classic lay-in and clip-in panels to modular systems
+                        <h2 data-translate="metal_panels">Metal</h2>
+                        <p data-translate="metal_panels_desc">Metal ceiling tiles range from classic lay-in and clip-in panels to modular systems
                          in unique sizes, shapes, textures, and colours.</p>
                     </div>
                 </div>
@@ -140,8 +148,8 @@
                         <img src="/images/applications/metal/RS_Armstrong_MESH_B-H_300_B-H_300_MT.webp" alt="">
                     </div>
                     <div class="card-text short">
-                        <h2>Mesh</h2><br>
-                        <p>Mesh ceilings are available in a variety of patterns and colours for a striking
+                        <h2 data-translate="metal_mesh">Mesh</h2><br>
+                        <p data-translate="metal_mesh_desc">Mesh ceilings are available in a variety of patterns and colours for a striking
                          industrial look, and modern alternative to open plenums.</p>
                     </div>
                 </div>
@@ -151,8 +159,8 @@
                         <img src="/images/applications/metal/Mat-Ceiling-Metal_RSC_Knauf-Ceiling-Solutions_METAL-Creative_Hotel_CF_4x3_S.webp" alt="">
                     </div>
                     <div class="card-text short">
-                        <h2>Metal Creative</h2><br>
-                        <p>Our artistic triangular tiles seamlessly combine with square tiles to form
+                        <h2 data-translate="metal_creative">Metal Creative</h2><br>
+                        <p data-translate="metal_creative_desc">Our artistic triangular tiles seamlessly combine with square tiles to form
                          parallelograms that blend and balance interiors.</p>
                     </div>
                 </div>
@@ -162,8 +170,8 @@
                         <img src="/images/applications/metal/Mat-Ceiling-Metal_AT-Austria-Center-Vienna_CF_4x3_S.webp" alt="">
                     </div>
                     <div class="card-text short">
-                        <h2>Metal Open Ceilings</h2><br>
-                        <p>Metal canopies and baffles offer endless ways to add drama, colour, and dimension to
+                        <h2 data-translate="metal_open">Metal Open Ceilings</h2><br>
+                        <p data-translate="metal_open_desc">Metal canopies and baffles offer endless ways to add drama, colour, and dimension to
                          your design.</p>
                     </div>
                 </div>
@@ -173,8 +181,8 @@
                         <img src="/images/applications/metal/Mat-Ceiling-Metal_PL-VOX-Furniture-Shop_CF_4x3_S.webp" alt="">
                     </div>
                     <div class="card-text short">
-                        <h2>Metal Grille</h2><br>
-                        <p>Open cell metal tiles mask the plenum, and elegantly cover lighting, ventilation, and
+                        <h2 data-translate="metal_grille">Metal Grille</h2><br>
+                        <p data-translate="metal_grille_desc">Open cell metal tiles mask the plenum, and elegantly cover lighting, ventilation, and
                          sprinklers while ensuring access to these vital systems.</p>
                     </div>
                 </div>
@@ -186,8 +194,8 @@
                     <img src="/images/applications/metal/RS_METAL-Sky-Element-Clip_CF_4x3_L.webp" class="img" alt="">
                 </div>
                 <div class="separate">
-                    <b>Performance Features</b>
-                    <p>Our metal ceilings offer important quality benefits, like fire resistance, acoustic
+                    <b data-translate="metal_performance_title">Performance Features</b>
+                    <p data-translate="metal_performance_p">Our metal ceilings offer important quality benefits, like fire resistance, acoustic
                      comfort, impact resistance, and easy access with swing-down functionality. We also provide
                      specially engineered solutions for more demanding applications, such as seismic performance,
                      security resistance, and chilled system integration, as well as metal tiles with a unique
@@ -200,8 +208,8 @@
                     <img src="/images/applications/metal/Mat-Ceiling-Metal_CH-Rorschacherstrasse_CF_4x3_L.webp" class="img" alt="">
                 </div>
                 <div class="separate">
-                    <b>From Sleek Classics to Custom Creations</b>
-                    <p>Discover the infinite possibilities of Vario Design – where classic metal solutions can
+                    <b data-translate="metal_custom_title">From Sleek Classics to Custom Creations</b>
+                    <p data-translate="metal_custom_p">Discover the infinite possibilities of Vario Design – where classic metal solutions can
                      be configured with additional colours, perforations, shapes, acoustic infills, and more.
                      Our design team and technical experts also offer complete customisation to meet your exact
                      requirements. Faceted, flat, or curved? Monolithic panels or radiating trapezoids? Any
@@ -216,20 +224,42 @@
         <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
     
     
-        <div class="footer">
-            <div class="nav-bar">
-                <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html">Kontakto</a>
+<div class="footer">
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
             </div>
-            <div class="social">
-                <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
             </div>
-            <div>
-                <h5>Copyright &copy; 2023|Luli Gips All rights reserved.</h5>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
             </div>
         </div>
+        
+        <div class="nav-bar">
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
+        </div>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        
+        <div>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
+        </div>
+    </div>
+    
         <script src="../js/js.js"></script>
 
+<script src="/js/translations.js"></script>
     <script src="/js/breadcrumbs.js"></script>
     <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
     </body>

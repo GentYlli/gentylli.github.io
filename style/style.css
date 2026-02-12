@@ -232,6 +232,7 @@ html {
 
 .header .links{
   width: 40%;
+  min-width: 430px;
   height: 20px;
   display: flex;
   flex-direction: row;
@@ -2213,4 +2214,41 @@ p {
 
 @media only screen and (max-width:1024px) {
   .benefits-row{flex-wrap: wrap;}
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+#lang-btn {
+  background: var(--base-color);
+  color: #fff;
+  border: 2px solid var(--base-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#lang-btn:hover {
+  background: var(--light-color);
+  border-color: var(--light-color);
+}
+
+#lang-btn i {
+  font-size: 16px;
+}
+
+@media (max-width: 920px) {
+  .language-switcher {
+    display: none; /* Hide in mobile menu for now */
+  }
 }

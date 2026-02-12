@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,31 +27,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="/index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
     <div class="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="/index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -68,39 +76,37 @@
 
     <div class="section" id="section">
         <div class="logos" data-aos="fade-down" data-aos-duration="500">
-            <img src="../images/knauf-logo.png" alt="" id="knauf-logo">
+            <img src="../images/knauf-logo.png" alt="Knauf Logo" id="knauf-logo">
         </div>
-        <p id="paragraph" data-aos="fade-left">Me krenari prezantojmë veten si partneri më i madh i Knauf në Shqipëri. Bashkëpunimi ynë i afërt me Knauf ka bërë që të jemi liderë në tregun shqiptar të produkteve ndërtimore.
-         Ne ofrojmë një gamë të gjerë të produkteve Knauf, duke përfshirë materiale inovative dhe zgjidhje cilësore për projektet tuaja ndërtimore. Eksperienca jonë dhe angazhimi ndaj cilësisë bëjnë që ne të jemi zgjedhja e preferuar
-         për klientët që kërkojnë standardet më të larta në industrinë e ndërtimit.</p>
+        <p id="paragraph" data-aos="fade-left" data-translate="gips_intro">Me krenari prezantojmë veten si partneri më i madh i Knauf në Shqipëri. Bashkëpunimi ynë i afërt me Knauf ka bërë që të jemi liderë në tregun shqiptar të produkteve ndërtimore. Ne ofrojmë një gamë të gjerë të produkteve Knauf, duke përfshirë materiale inovative dhe zgjidhje cilësore për projektet tuaja ndërtimore. Eksperienca jonë dhe angazhimi ndaj cilësisë bëjnë që ne të jemi zgjedhja e preferuar për klientët që kërkojnë standardet më të larta në industrinë e ndërtimit.</p>
     </div>
     
     <div class="bar"> 
         <div class="lloji-pllaka">
-            <button class="lloji-btn" id="pllaka-btn" data-aos="fade-up">Pllaka</button>
+            <button class="lloji-btn" id="pllaka-btn" data-aos="fade-up" data-translate="cat_boards">Pllaka</button>
         </div>
 
         <div class="lloji-profile">
-            <button class="lloji-btn" id="profile-btn" data-aos="fade-up" data-aos-delay="100">Profile</button>
+            <button class="lloji-btn" id="profile-btn" data-aos="fade-up" data-aos-delay="100" data-translate="cat_profiles">Profile</button>
         </div>
 
         <div class="lloji-stuko">
-            <button class="lloji-btn" id="stuko-btn" data-aos="fade-up" data-aos-delay="150">Stuko</button>
+            <button class="lloji-btn" id="stuko-btn" data-aos="fade-up" data-aos-delay="150" data-translate="cat_plaster">Stuko</button>
         </div>
 
         <div class="lloji-lesh">
-            <button class="lloji-btn" id="lesh-btn" data-aos="fade-up" data-aos-delay="200">Lesh</button>
+            <button class="lloji-btn" id="lesh-btn" data-aos="fade-up" data-aos-delay="200" data-translate="cat_insulation">Lesh</button>
         </div>
 
         <div class="lloji-aksesore">
-            <button class="lloji-btn" id="aksesore-btn" data-aos="fade-up" data-aos-delay="250">Aksesore</button>
+            <button class="lloji-btn" id="aksesore-btn" data-aos="fade-up" data-aos-delay="250" data-translate="cat_accessories">Aksesore</button>
         </div>
 
     </div>
     
         <!-- Product Search Bar -->
 <div class="search-container">
-  <input type="text" id="product-search" class="search-input" placeholder="Kërko produkte...">
+  <input type="text" id="product-search" class="search-input" placeholder="Kërko produkte..." data-translate-placeholder="search_products">
   <i class="fas fa-search search-icon"></i>
 </div>
 
@@ -122,44 +128,45 @@
     <button class="toTop" id="toTop" onclick="toTop()"><i class="fas fa-angle-up"></i></button>
 
 <div class="footer">
-    <div class="footer-info">
-        <div class="footer-column">
-            <h4>Luli Gips</h4>
-            <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi të cilësisë së lartë.</p>
+        <div class="footer-info">
+            <div class="footer-column">
+                <h4>Luli Gips</h4>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi të cilësisë së lartë.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="contact">Kontakt</h4>
+                <p><i class="fas fa-phone"></i> +355 69 573 1993</p>
+                <p><i class="fas fa-envelope"></i> info@luligips.al</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Tiranë, Shqipëri</span></p>
+            </div>
+            <div class="footer-column">
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <h4>Kontakt</h4>
-            <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
-            <p><i class="fas fa-envelope"></i> info@luligips.al</p>
-            <p><i class="fas fa-map-marker-alt"></i> Adresa juaj këtu</p>
+        
+        <div class="nav-bar">
+            <a href="/index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
         </div>
-        <div class="footer-column">
-            <h4>Orari i Punës</h4>
-            <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-            <p>E Diel: Mbyllur</p>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        
+        <div>
+            <h5><span data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</span></h5>
         </div>
     </div>
-    
-    <div class="nav-bar">
-        <a href="/index.html">Kryefaqja</a><div class="vl"></div><a href="/html/kontakto.html">Kontakto</a>
-    </div>
-    
-    <div class="social">
-        <a href="https://www.instagram.com/luli.gips/?igshid=MmU2YjMzNjRlOQ%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/luligip/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-    </div>
-    
-    <div>
-        <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
-    </div>
-</div>
 
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/355XXXXXXXXX?text=Përshëndetje!%20Dua%20të%20pyes%20për%20produktet%20tuaja." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+<a href="https://wa.me/355695731993?text=Përshëndetje!%20Dua%20të%20pyes%20për%20produktet%20tuaja." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="/js/translations.js"></script>
     <script src="../js/js.js"></script>
     <script src="../js/gips-data.js"></script>
     <script src="../js/search.js"></script>
@@ -173,6 +180,14 @@
 
             function showDiv(divId) {
                 var divs = ["profile", "pllaka", "stuko", "lesh", "aksesore"];
+                var buttons = ["profile-btn", "pllaka-btn", "stuko-btn", "lesh-btn", "aksesore-btn"];
+                
+                // Remove active class from all buttons
+                buttons.forEach(function(btnId) {
+                  var btn = document.getElementById(btnId);
+                  if (btn) btn.classList.remove('active');
+                });
+                
                 // Close other sections
                 divs.forEach(function(id) {
                     const el = document.getElementById(id);
@@ -182,11 +197,15 @@
                     el.style.maxHeight = '0px';
                     el.classList.remove('open');
                 });
-                // Open the requested div with transition, then set overflow visible
+                
+                // Add active class to clicked button
+                var activeBtn = document.getElementById(divId + '-btn');
+                if (activeBtn) activeBtn.classList.add('active');
+                
+                // Open the requested div with transition
                 const el = document.getElementById(divId);
                 if (el) {
                     el.style.overflow = 'hidden';
-                    // trigger reflow to ensure transition
                     void el.offsetHeight;
                     el.style.maxHeight = el.scrollHeight + 'px';
                     el.classList.add('open');
@@ -199,7 +218,6 @@
       AOS.init();
 </script>
     <script src="/js/breadcrumbs.js"></script>
-    <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
     <script>
       // Image Lightbox Functions
       function openLightbox(imageSrc) {

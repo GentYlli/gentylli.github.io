@@ -17,31 +17,39 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/index.html">Kryefaqja</a>
-        <a href="../html/gips.html">Gips</a>
-        <a href="../html/bojera.html">Bojera</a>
-        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-        <a href="../html/kapot.html">Kapot</a>        
-        <a href="../html/pft.html">PFT</a>
-        <a href="../html/kontakto.html">Kontakto</a>
+        <a href="../index.html" data-translate="nav_home">Kryefaqja</a>
+        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>        
+        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
+        <a href="../html/kontakto.html" data-translate="nav_contact">Kontakto</a>
       </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo" id="logo">
-            <a href="/index.html"><img src="../images/luligips.png" alt=""></a>
+            <a href="./index.html"><img src="../images/luligips.png" alt="Luli Gips Logo"></a>
         </div>
         <div class="links" id="links">
-            <a href="/index.html" class="border">Kryefaqja</a>
+            <a href="/index.html" class="border" data-translate="nav_home">Kryefaqja</a>
             <div class="dropdown-btn">
-                <a class="produkte">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 2px;"></i></a>
+                <a class="produkte" data-translate="nav_products">Produkte<i class="fa fa-angle-down" aria-hidden="true" style="margin: 4px;"></i></a>
                     <div class="dropdown">
-                        <a href="../html/gips.html">Gips</a>
-                        <a href="../html/bojera.html">Bojera</a>
-                        <a href="../html/kcs.html">KCS(Tavanet e varura)</a>
-                        <a href="../html/kapot.html">Kapot</a>
-                        <a href="../html/pft.html">PFT</a>
+                        <a href="../html/gips.html" data-translate="nav_gips">Gips</a>
+                        <a href="../html/bojera.html" data-translate="nav_paints">Bojera</a>
+                        <a href="../html/kcs.html" data-translate="nav_kcs">KCS(Tavanet e varura)</a>
+                        <a href="../html/kapot.html" data-translate="nav_kapot">Kapot</a>
+                        <a href="../html/pft.html" data-translate="nav_pft">PFT</a>
                     </div>
             </div>
-            <a href="../html/kontakto.html" class="border">Kontakto</a>
+            <a href="../html/kontakto.html" class="border" data-translate="nav_contact">Kontakto</a>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">SQ</span>
+                </button>
+            </div>
         </div>
         
         <div id="main">
@@ -58,7 +66,7 @@
     <div class="hero-solutions hero-short">
         <img src="/images/solutions/healthcare/PL-Centre-of-Medical-Simulation-Medical-University-of-Lublin-1_CF_background_L.webp" alt="">
         <div class="hero-text-solutions">
-            <h1><b><i>Ceilings for Healthcare Buildings</i></b></h1>
+            <h1><b><i data-translate="health_hero_title">Ceilings for Healthcare Buildings</i></b></h1>
         </div>
     </div>
 
@@ -66,8 +74,8 @@
         
         <div class="paragraph">
             <div class="paragraph-col">
-                <b><i>Thoughtful Design That Welcomes Wellbeing   </i></b>
-                <p>Careful interior design of hospitals is vital. Patient rooms, waiting zones, and operating
+                <b><i data-translate="health_intro_title">Thoughtful Design That Welcomes Wellbeing   </i></b>
+                <p data-translate="health_intro_p">Careful interior design of hospitals is vital. Patient rooms, waiting zones, and operating
                  theatres all have rigorous safety standards. We are well-versed in the complexities of healthcare
                  facilities. Antibacterial, washable, fire-resistant, and low in emissions, our hospital ceilings
                  uphold the highest standards of hygiene and safety. Yet our designs don’t feel sterile. Optimal
@@ -78,7 +86,7 @@
 
         <div class="paragraph">
             <div class="benefits-col">
-                <b><i>Benefits of Our Ceilings for Healthcare & Food Production</i></b>
+                <b><i data-translate="health_benefits_title">Benefits of Our Ceilings for Healthcare & Food Production</i></b>
 
                 <div class="benefits-row">
 
@@ -87,8 +95,8 @@
                             <img src="/images/solutions/benefits/Icon_Antimicrobial.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Antimicrobial protection </span>
-                            <span class="par">Whether in healthcare or food production, keeping interiors as hygienic as possible is fundamental in preventing the spread of disease. Our hygienic ceiling tiles are cleanable and specially coated to limit the growth of bacteria. </span>
+                            <span class="head" data-translate="benefit_antimicrobial_title">Antimicrobial protection </span>
+                            <span class="par" data-translate="benefit_antimicrobial_desc">Whether in healthcare or food production, keeping interiors as hygienic as possible is fundamental in preventing the spread of disease. Our hygienic ceiling tiles are cleanable and specially coated to limit the growth of bacteria. </span>
                         </div>
                     </div>
 
@@ -97,8 +105,8 @@
                             <img src="/images/solutions/benefits/Icon_sound_absorption-1.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">Comfortable acoustics</span>
-                            <span class="par">Balanced acoustic environments enhance occupant comfort,
+                            <span class="head" data-translate="benefit_acoustics_title">Comfortable acoustics</span>
+                            <span class="par" data-translate="benefit_acoustics_desc">Balanced acoustic environments enhance occupant comfort,
                              aid speech intelligibility, and support privacy.
                              Our ceiling materials offer high sound absorption for clear communication and optimal
                              sound attenuation to reduce distractions between rooms.</span>
@@ -110,8 +118,8 @@
                             <img src="/images/solutions/benefits/Icon_light_reflection.jpg" alt="">
                         </div>
                         <div class="benefits-text">
-                            <span class="head">High light reflectance</span>
-                            <span class="par">Natural light has a positive effect on human mood and productivity.
+                            <span class="head" data-translate="benefit_light_title">High light reflectance</span>
+                            <span class="par" data-translate="benefit_light_desc">Natural light has a positive effect on human mood and productivity.
                                 Returning up to 88% of light (versus 75% with standard ceilings),
                                  our ceiling tiles enhance occupant wellbeing and reduce the need for artificial lighting,
                                  thus also saving energy.</span>
@@ -128,8 +136,8 @@
                 <img src="/images/solutions/healthcare/NL_OZG_Hospital_1_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Hospitals</b>
-                <p>Our mineral and metal ceilings follow the French standard NF S 90-351:2013 – the most stringent
+                <b data-translate="health_hospitals_title">Hospitals</b>
+                <p data-translate="health_hospitals_p">Our mineral and metal ceilings follow the French standard NF S 90-351:2013 – the most stringent
                  hygiene guideline in Europe for healthcare facilities. Thanks to a special antimicrobial coating,
                  our ceilings help prevent the spread of diseases and infections. They also offer high light
                  reflectance and excellent acoustics for the comfort of patients and personnel alike. Combined,
@@ -142,8 +150,8 @@
                 <img src="/images/solutions/healthcare/CH_Muensterlingen_Hospital_7_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Clean Rooms</b>
-                <p>We offer specialised mineral ceiling solutions for cleanrooms producing electronics,
+                <b data-translate="health_cleanrooms_title">Clean Rooms</b>
+                <p data-translate="health_cleanrooms_p">We offer specialised mineral ceiling solutions for cleanrooms producing electronics,
                  semiconductors, micromechanics, optics, biotechnology, pharmaceuticals, or medical devices.
                  Our cleanroom ceilings support strict hygiene standards in compliance with ISO 14644-1.</p>
             </div>
@@ -154,8 +162,8 @@
                 <img src="/images/solutions/healthcare/NL_Wilhelmina_Hospital_Minimal-risk_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Care Homes</b>
-                <p>Create the perfect environment for individual care. Our ceilings’ enhanced acoustics improve
+                <b data-translate="health_carehomes_title">Care Homes</b>
+                <p data-translate="health_carehomes_p">Create the perfect environment for individual care. Our ceilings’ enhanced acoustics improve
                  communication between elderly and staff, while their high light reflectance brightens up every
                  room and every face. Moreover, their antimicrobial performance greatly simplifies hygiene.</p>
             </div>
@@ -166,8 +174,8 @@
                 <img src="/images/solutions/healthcare/CH_AFG_Kids_Arena_St_Gallen_3_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Nurseries</b>
-                <p>Countless shapes and colours, high light reflectance, optimal sound absorption, plus easy to
+                <b data-translate="health_nurseries_title">Nurseries</b>
+                <p data-translate="health_nurseries_p">Countless shapes and colours, high light reflectance, optimal sound absorption, plus easy to
                  clean – our ceiling solutions offer everything you need to create a fun, warm atmosphere where
                  young minds will love to learn and play.</p>
             </div>
@@ -178,8 +186,8 @@
                 <img src="/images/solutions/healthcare/NL_Iederz_Groningen_CF_4x3_L.webp" class="img" alt="">
             </div>
             <div class="separate">
-                <b>Food Processing Industry</b>
-                <p>To support the strict hygiene and safety standards of the food industry, we offer a special
+                <b data-translate="health_food_title">Food Processing Industry</b>
+                <p data-translate="health_food_p">To support the strict hygiene and safety standards of the food industry, we offer a special
                  range of commercial ceiling tiles that are coated to limit the growth of bacteria and fungi.
                  Besides production safety, our solutions enhance staff productivity through great acoustics and
                  light reflectance.</p>
@@ -197,23 +205,23 @@
         <div class="footer-info">
             <div class="footer-column">
                 <h4>Luli Gips</h4>
-                <p>Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
+                <p data-translate="trusted_supplier">Furnizuesi juaj i besuar për gips, bojëra dhe materiale ndërtimi.</p>
             </div>
             <div class="footer-column">
-                <h4>Kontakt</h4>
+                <h4 data-translate="contact">Kontakt</h4>
                 <p><i class="fas fa-phone"></i> +355 XX XXX XXX</p>
                 <p><i class="fas fa-envelope"></i> info@luligips.al</p>
                 <p><i class="fas fa-map-marker-alt"></i> Adresa juaj</p>
             </div>
             <div class="footer-column">
-                <h4>Orari i Punës</h4>
-                <p>E Hënë - E Shtunë: 8:00 - 18:00</p>
-                <p>E Diel: Mbyllur</p>
+                <h4 data-translate="working_hours">Orari i Punës</h4>
+                <p data-translate="monday_saturday">E Hënë - E Shtunë: 8:00 - 18:00</p>
+                <p data-translate="sunday">E Diel: Mbyllur</p>
             </div>
         </div>
         
         <div class="nav-bar">
-            <a href="./index.html">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html">Kontakto</a>
+            <a href="./index.html" data-translate="nav_home">Kryefaqja</a><div class="vl"></div><a href="./html/kontakto.html" data-translate="contact">Kontakto</a>
         </div>
         
         <div class="social">
@@ -222,7 +230,7 @@
         </div>
         
         <div>
-            <h5>Copyright &copy; 2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
+            <h5 data-translate="copyright">2025 | Luli Gips | Të gjitha të drejtat e rezervuara.</h5>
         </div>
     </div>
 
@@ -233,6 +241,7 @@
 
     <script src="../js/js.js"></script>
 
+<script src="/js/translations.js"></script>
     <script src="/js/breadcrumbs.js"></script>
     <!-- Breadcrumbs handled by /js/breadcrumbs.js -->
 </body>
